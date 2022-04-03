@@ -8,6 +8,7 @@
     --accent-color: #c59cff;
     --accent-color2: #D6CA98;
     --bg-color: rgba(31, 3, 58, 0.7);
+    --bg-color-opaque: rgba(31, 3, 58, 1);
     --p0-color: rgba(31, 3, 58, 1);
     --p1-color: #91928f;
     --p2-color: #6d775d;
@@ -36,6 +37,20 @@ button {
     display: block;
 }
 
+audiobutton {
+    position: relative;
+    padding: 2px 2px;
+    text-align: center;
+    /* margin: 20px 20px; */
+    width: 5%;
+    border: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-out;
+    display: block;
+}
 sms_button {
     margin: 20px auto;
     position: relative;
@@ -105,7 +120,7 @@ input[type=text] {
     border-bottom: 2px solid var(--accent-color);
     background-color: var(--bg-color);
     color: white;
-  }
+}
 
 .input[type=text]:focus {
     border: 3px solid var(--accent-color2);
@@ -131,6 +146,18 @@ input[type=text] {
     background-color: var(--bg-color);
 }
 
+.audiopanel {
+    background-color: var(--bg-color-opaque);
+    width: 100%;
+    padding: 0%
+}
+audiopanel[type=text] {
+    padding: 5%;
+    border: none;
+    border-bottom: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
+    color: white;
+}
 
 .innerpanel {
     position: relative;
