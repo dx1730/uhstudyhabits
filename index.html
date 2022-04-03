@@ -281,7 +281,7 @@
                     $("#six2").fadeIn(2000).fadeOut(2000, function(){
                       $("#six3").fadeIn(2000).fadeOut(2000, function(){
                         $("#six4").fadeIn(2000).fadeOut(2000, function(){
-                          $("#six5").fadeIn(2000)
+                          $("#six5").fadeIn(2000);
                        });
                       });
                     });
@@ -291,10 +291,10 @@
             </script>
 
             <div id="buttons6">
-              <button onClick="vslide('next', 'pro'); loc('the A level')">“I’ll head to the A level of the Reg and do some work there.” </button>
-              <button onClick="vslide('next', 'dist'); loc('Crerar')">““Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</button>
-              <button onClick="vslide('next', 'calm'); friend('Harper')">“Let me head to a cafe, a little white noise really puts me in focus state.”</button>
-              <button onClick="vslide('next', 'ind'); friend('home')">“I’ll head home to the comfort of my room and avoid too many distractions, that’s the best way to be productive.”</button>
+              <button onClick="vslide('next', 'pro'); loc('A')">“I’ll head to the A level of the Reg and do some work there.” </button>
+              <button onClick="vslide('next', 'dist'); loc('B')">““Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</button>
+              <button onClick="vslide('next', 'calm'); loc('C')">“Let me head to a cafe, a little white noise really puts me in focus state.”</button>
+              <button onClick="vslide('next', 'ind'); loc('D')">“I’ll head home to the comfort of my room and avoid too many distractions, that’s the best way to be productive.”</button>
             </div>
           </div>
 
@@ -319,6 +319,11 @@
               <div class = "innerpanel" id="seven5"> 
                 … you go back to studying …
               </div>
+              <div class = "innerpanel" id="seven6"> 
+                In the midst of dwelling over a rather difficult question on your problem set that has been keeping you a little frustrated and 
+                a little too deep in thought, you heard your phone buzz, and [friend_name] is asking where you are, and what you’re doing.
+              </div>
+              
             </div>
 
             <!-- Animation 7 -->
@@ -330,11 +335,14 @@
                   $("#seven3").hide(); 
                   $("#seven4").hide();  
                   $("#seven5").hide();  
+                  $("#seven6").hide();  
                   $("#seven1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
                     $("#seven2").fadeIn(2000).fadeOut(2000, function(){
                       $("#seven3").fadeIn(2000).fadeOut(2000, function(){
                         $("#seven4").fadeIn(2000).fadeOut(2000, function(){
-                          $("#seven5").fadeIn(2000)
+                          $("#seven5").fadeIn(2000).fadeOut(2000, function(){
+                            $("#seven6").fadeIn(2000);
+                          });
                        });
                       });
                     });
