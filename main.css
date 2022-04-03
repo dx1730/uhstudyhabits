@@ -5,7 +5,9 @@
     font-family: 'Georgia', serif;
 }
 :root {
-    --p0-color: #91928f;
+    --accent-color: #c59cff;
+    --bg-color: rgba(31, 3, 58, 0.7);
+    --p0-color: rgba(31, 3, 58, 1);
     --p1-color: #91928f;
     --p2-color: #6d775d;
     --p3-color: #a08971;
@@ -22,11 +24,10 @@ button {
     margin: 20px auto;
     position: relative;
     padding: 10px 24px;
-    background-color: rgba(128, 128, 128, 0.8);
     /* margin: 20px 20px; */
     width: 70%;
-    border: 2px solid white;
-    background-color: rgba(128, 128, 128, 0.9);
+    border: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
     color: white;
     cursor: pointer;
     border-radius: 5px;
@@ -76,14 +77,16 @@ button:hover {
     align-items: left;
     border-radius: 3px;
     width: 50%;
-    border: 2px solid white;
+    border: 2px solid var(--accent-color);
     padding: 4%;
     box-sizing: border-box;
     text-align: center; 
 }
+
 .input[type=text]:focus {
-    border: 3px solid turquoise;
+    border: 3px solid var(--accent-color);
 }
+
 
 .panel1 {
     border-radius: 10px;
@@ -91,17 +94,17 @@ button:hover {
     padding: 1%;
     line-height: 1.3;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.9);
+    background-color: var(--bg-color);
 }
 
 .panel2 {
     border-radius: 10px;
     width: 40%;
     height: 10%;
-    padding: 1%;
+    padding: 2%;
     line-height: 1.3;
     text-align: center;
-    background-color: rgba(128, 128, 128, 0.6);
+    background-color: var(--bg-color);
 }
 
 
