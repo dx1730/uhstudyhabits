@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>UH Study Habits</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="pages">
+<<<<<<< HEAD
 
           <div>
             <form>
@@ -21,6 +22,8 @@
             </form> 
           </div>
           
+=======
+>>>>>>> 88d115bbb873ebbfc1e890e9cc043e276fe0a109
           <!-- STORY PAGE 1 -->
           <div class="page one">        
             <div class="panel2">
@@ -96,7 +99,7 @@
               });
             </script>
 
-            <div>
+            <div id ="buttons2">
               <button onClick="vslide('next', 'ind')">LoFi music would be perfect right now.</button>
               <button onClick="vslide('next', 'pro')">Let me catch up on that podcast I’ve been tuning in to. </button>
               <button onClick="vslide('next', 'dist')">I could use some hip hop to feel more awake. Where’s that RapCaviar playlist…</button>
@@ -111,29 +114,44 @@
            <!-- STORY PAGE 3 -->
 
           <div class="page three">
-            <div class="panel1">
-              The lecture hall is not precisely where you want to be right now, but work must be done and in due time, 
-              your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all of 
-              lecture unfocused, but not so close that you can hear the instructor’s breathing. You grasp onto the fragments
-              of conversation dancing around the room, find mild entertainment in catching brief whiffs of campus happenings 
-              and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into one voice. <br> <br>
+            <div class="panel2">
+              <div class = "innerpanel" id="three1"> The lecture hall is not precisely where you want to be right now, but work must be done and in due time, 
+                your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all of 
+                lecture unfocused, but not so close that you can hear the instructor’s breathing.
+              </div>
+              
+              <div class = "innerpanel" id="three2"> You grasp onto the fragments of conversation dancing around the room, find mild entertainment in catching brief whiffs of campus happenings 
+                and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into one voice.
+              </div>
 
-              Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into your bag.
+              <div class = "innerpanel" id="three3"> 
+                Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into your bag.
+              </div>
+
+              <!-- Animation 3 -->
               <script>
-                $(document).ready(function(){
-                  $(this).load(function(){
-                    $(this).hide();
+                $("page three").ready(function(){
+                  $("#buttons2").click(function(){
+                    $("#three1").hide();  
+                    $("#three2").hide();  
+                    $("#three3").hide();  
+                    $("#three1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                      $("#three2").fadeIn(2000).fadeOut(2000, function(){
+                        $("#three3").fadeIn(2000);
+                      });
+                    });
                   });
                 });
               </script>
             </div>
-            <div>
+
+            <div id = "buttons3">
               <button onClick="vslide('next', 'ind')">“My iPad has been one of the most useful things I’ve ever owned.” A few taps are all you need to get ready for class.</button>
               <button onClick="vslide('next', 'calm')">“Does my laptop have charge? Ah, yes it does.” Your hands are already dancing across the keyboard even before the lecture has started.</button>
               <button onClick="vslide('next', 'dist')">“I’m running out of paper in this notebook, and my highlighters are almost done too.” Note-taking is an artform, and you are the artist. Gel pens and highlighters on college-rule are the medium.</button>
               <button onClick="vslide('next', 'pro')">“It’s okay. I’ll pay more attention without anything in front of me to distract, and the lecture notes will be online later today anyways.” Truly the minimalist approach..</button>
-            
             </div>
+
           </div>
 
           <!-- STORY TRANSITION 3-->
@@ -141,13 +159,37 @@
 
           <!-- STORY PAGE 4 -->
           <div class="page four">
-            <div class="panel1">
-              Everyone files out of the room in the usual ordered chaos, your friends in a hurry to catch 
-              their next class. You, however, find yourself surrounded by gothic buildings under a pale 
-              blue sky, with an hour or so until the next class section, and the ever so sweet prospect of 
-              choice and freedom. <br> <br>
-              Not that you’ll spend it doing much of anything meaningful, of course. 
+            <div class="panel2">
+              <div class = "innerpanel" id="four1"> 
+                Everyone files out of the room in the usual ordered chaos, your friends in a hurry to catch 
+                their next class.
+              </div>
+              <div class = "innerpanel" id="four2"> 
+                You, however, find yourself surrounded by gothic buildings under a pale 
+                blue sky, with an hour or so until the next class section, and the ever so sweet prospect of 
+                choice and freedom.
+              </div>
+              <div class = "innerpanel" id="four3"> 
+                Not that you’ll spend it doing much of anything meaningful, of course. 
+              </div>
             </div>
+
+            <!-- Animation 4 -->
+            <script>
+              $("page four").ready(function(){
+                $("#buttons3").click(function(){
+                  $("#three1").hide();  
+                  $("#three2").hide();  
+                  $("#three3").hide();  
+                  $("#three1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#three2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#three3").fadeIn(2000);
+                    });
+                  });
+                });
+              });
+            </script>
+
             <div>
               <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as well.” </button>
               <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My friend should also be free right now, let me give them a call.”</button>
@@ -206,12 +248,38 @@
               matter. <br>
             </div>
             <div>
-              <button onClick="vslide('next', 'dist')">“I’ll head to the A level of the Reg and do some work there.”</span></button>
-              <button onClick="vslide('next', 'calm')">“Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</span></button>
-              <button onClick="vslide('next', 'pro')">“Let me head to a cafe, a little white noise really puts me in focus state.”</button>
-              <button onClick="vslide('next', 'ind')">“I’ll head home to the comfort of my room and avoid too many distractions, that’s the best way to be productive.”</button>
+              <button onClick="vslide('next', 'dist'); loc('A')">“I’ll head to the A level of the Reg and do some work there.”</button>
+              <button onClick="vslide('next', 'calm'); loc('B')">“Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</button>
+              <button onClick="vslide('next', 'pro'); loc('C')">“Let me head to a cafe, a little white noise really puts me in focus state.”</button>
+              <button onClick="vslide('next', 'ind'); loc('D')">“I’ll head home to the comfort of my room and avoid too many distractions, that’s the best way to be productive.”</button>
             </div>
           </div>
+
+          <!-- STORY TRANSITION 6-->
+          <div class="page t6"></div>
+
+          <div class="page seven">
+            <div class="panel1">
+              … Time passes … <br>
+              … you eat dinner with a few friends … <br>
+              … you feel happy to spend time with them … <br>
+              … you promise to get dinner again tomorrow … <br>
+              … you go back to studying … <br> <br>
+
+              In the midst of dwelling over a rather difficult question on your problem set that has been 
+              keeping you a little frustrated and a little too deep in thought, you heard your phone buzz, 
+              and [friend_name] is asking where you are, and what you’re doing.
+            </div>
+            <div>
+              <button onClick="vslide('next', 'pro')">“im at <span id="loc1"></span> and super bored lets do smth”</button>
+              <button onClick="vslide('next', 'dist')">“wanna study w me at <span id="loc2"></span> might be here late tho”</button>
+              <button onClick="vslide('next', 'calm')">“Im at <span id="loc3"></span> but really busy, wanna do tomorrow instead?”</button>
+              <button onClick="vslide('next', 'ind')">… (don’t respond)</button>
+            </div>
+          </div>
+
+          <!-- STORY TRANSITION 7-->
+          <div class="page t7"></div>
 
         </div>
       </div>
