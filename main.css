@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Georgia&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+}
+button {
+    margin: 20px auto;
+    position: relative;
+    padding: 10px 24px;
+    /* margin: 20px 20px; */
+    width: 70%;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-out;
+    display: block;
+}
+  
+button:hover {
+    transform: scale(1.05);
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/*Need to change pages width to n * 100, where n is number of total pages*/
+.pages {
+    display: flex;
+    width: 700%;
+    box-sizing: border-box;
+}
+.vpages {
+    box-sizing: border-box;
+}
+.page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.7s;
+    color: white;
+    transition-duration: 1.5s;
+}
+
+.panel1 {
+
+    width: 40%;
+    padding: 1%;
+    line-height: 1.3;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.9);
+}
+
+.one{
+    background-color: black;
+    background-image: url('../art/page1frame.png');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.two{
+    background-color: black;
+    background-image: url('../art/page2frame.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.three{
+    background-color: black;
+    background-image: url('../art/page3frame.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.four{
+    background-color: black;
+    background-image: url('../art/page4frame.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/*Transitions*/
+.t1{
+    background-color: black;
+    background-image: url('../art/transition1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.t2{
+    background-color: black;
+    background-image: url('../art/transition2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.t3{
+    background-color: black;
+    background-image: url('../art/transition3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
