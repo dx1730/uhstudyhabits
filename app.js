@@ -174,3 +174,4 @@ function pause() {
     var audio = document.getElementById("audio");
     audio.pause();
 }
+

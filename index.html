@@ -19,6 +19,28 @@
     <audio id="audio" src="Maple.mp3"></audio>
   </div>
     <div class="container">
+      <audio id="leson" src="Maple.mp3" autoplay="true" hidden="true" loop="true"></audio>
+      <script>
+        var play = true;
+        
+        var myAudio = document.getElementById("leson");
+        
+        function onKeyDown(event) {
+                switch (event.keyCode) {
+                    case 32: //SpaceBar                    
+                        if (play) {
+                            myAudio.pause();
+                            play = false;
+                        } else {
+                            myAudio.play();
+                            play = true;
+                        }
+                        break;
+                }
+          return false;
+        }
+        window.addEventListener("keydown", onKeyDown, false);
+        </script>
         <div class="pages">
           <div class = "page zero">
             <div class = "panel1">
@@ -75,10 +97,10 @@
               $("#one3").hide();
               $("#buttons1").hide();
               $("#zero2").click(function(){
-                $("#one1").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#one2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                    $("#one3").fadeIn(2000);
-                    $("#buttons1").delay(2000).fadeIn(2000);
+                $("#one1").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#one2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                    $("#one3").fadeIn(1000);
+                    $("#buttons1").delay(1000).fadeIn(1000);
                   });
                 });
               });
@@ -125,9 +147,9 @@
               $("#two1").hide();
               $("#two2").hide();
               $("#two3").hide();
-              $("#two1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#two2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#two3").fadeIn(2000);
+              $("#two1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#two2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#two3").fadeIn(1000);
                 });
               });
             });
@@ -190,10 +212,10 @@
               $("#three2").hide();
               $("#three3").hide();
               $("#buttons3").hide()
-              $("#three1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#three2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#three3").fadeIn(2000);
-                  $("#buttons3").delay(2000).fadeIn(2000);
+              $("#three1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#three2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#three3").fadeIn(1000);
+                  $("#buttons3").delay(1000).fadeIn(1000);
                 });
               });
             });
@@ -206,7 +228,7 @@
       <div class="page t3"></div>
 
       <!-- STORY PAGE 4 -->
-      <div class="page four">
+      <div class="page four" id = "story4_1">
         <div class="panel2">
           <div class="innerpanel" id="four1">
             Everyone files out of the room in the usual ordered chaos, your friends in a hurry to catch
@@ -222,22 +244,6 @@
           </div>
         </div>
 
-        <!-- Animation 4 -->
-        <script>
-          $("page four").ready(function () {
-            $("#buttons3").click(function () {
-              $("#four1").hide();
-              $("#four2").hide();
-              $("#four3").hide();
-              $("#four1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#four2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#four3").fadeIn(2000);
-                });
-              });
-            });
-          });
-        </script>
-
         <div class="button-contain" id="buttons4">
           <button onClick="vslide('none', 'ind'); scenario(1)">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as
             well.” </button>
@@ -249,12 +255,44 @@
             schooler, I wonder how long it would take for them to notice.”</button>
         </div>
 
-        <div class = "panel2">
+        <div class = "panel2" id = "story4_2">
           <div class="innerpanel" id="four4">
 
           </div>
         </div>
+
+        <div class="button-contain" id="buttons4_next">
+          <button onClick="vslide('next', 'na')">“next...”</button>
+        </div>
+
       </div>
+
+      <!-- Animation 4 -->
+      <script>
+        $("page four").ready(function () {
+          $("#buttons3").click(function () {
+            $("#four1").hide();
+            $("#four2").hide();
+            $("#four3").hide();
+            $("#buttons4").hide();
+            $("#buttons4_next").hide();
+            $("#story4_2").hide();
+            $("#four1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#four2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#four3").fadeIn(1000);
+                $("#buttons4").delay(1000).fadeIn(1000);
+              });
+            });
+          });
+
+          $("#buttons4").click(function (){
+            $("#buttons4").fadeOut(500, function(){
+              $("#story4_2").fadeIn(500);
+              $("#buttons4_next").delay(500).fadeIn(500);
+            });
+          });
+        });
+      </script>
 
       <!-- STORY TRANSITION 4-->
       <div class="page t4"></div>
@@ -278,13 +316,13 @@
         <!-- Animation 5 -->
         <script>
           $("page five").ready(function () {
-            $("#buttons4").click(function () {
+            $("#buttons4_next").click(function () {
               $("#five1").hide();
               $("#five2").hide();
               $("#five3").hide();
-              $("#five1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#five2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#five3").fadeIn(2000);
+              $("#five1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#five2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#five3").fadeIn(1000);
                 });
               });
             });
@@ -348,11 +386,11 @@
               $("#six3").hide();
               $("#six4").hide();
               $("#six5").hide();
-              $("#six1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#six2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#six3").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                    $("#six4").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                      $("#six5").fadeIn(2000);
+              $("#six1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#six2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#six3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                    $("#six4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                      $("#six5").fadeIn(1000);
                     });
                   });
                 });
@@ -412,12 +450,12 @@
               $("#seven4").hide();
               $("#seven5").hide();
               $("#seven6").hide();
-              $("#seven1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#seven2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#seven3").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                    $("#seven4").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                      $("#seven5").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                        $("#seven6").fadeIn(2000);
+              $("#seven1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#seven2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#seven3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                    $("#seven4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                      $("#seven5").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                        $("#seven6").fadeIn(1000);
                       });
                     });
                   });
@@ -463,9 +501,9 @@
               $("#eight1").hide();
               $("#eight2").hide();
               $("#eight3").hide();
-              $("#eight1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#eight2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#eight3").fadeIn(2000)
+              $("#eight1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#eight2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#eight3").fadeIn(1000)
                 });
               });
             });
@@ -510,10 +548,10 @@
               $("#nine2").hide();
               $("#nine3").hide();
               $("#nine4").hide();
-              $("#nine1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#nine2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#nine3").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                    $("#nine4").fadeIn(2000);
+              $("#nine1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#nine2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#nine3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                    $("#nine4").fadeIn(1000);
                   });
                 });
               });
@@ -563,10 +601,10 @@
               $("#ten2").hide();
               $("#ten3").hide();
               $("#ten4").hide();
-              $("#ten1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#ten2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#ten3").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                    $("#ten4").fadeIn(2000);
+              $("#ten1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#ten2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#ten3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                    $("#ten4").fadeIn(1000);
                   });
                 });
               });
