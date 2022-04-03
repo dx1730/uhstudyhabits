@@ -59,6 +59,12 @@ button:hover {
     background-color: rgba(128, 128, 128, 0.9);
 }
 
+.innerpanel {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .one{
     background-color: black;
     background-image: url('../art/page1frame.png');
