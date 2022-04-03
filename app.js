@@ -77,6 +77,10 @@ function get_vars() {
     author_name = document.getElementById("book_name").value;
 }
 
+// show next button
+function show_next() {
+    document.getElementById("zero2").innerHTML = "<button onClick=\"vslide('next', 'none'); slidesettings()\">next...</button>";
+}
 
 // Edit pg 2 on beverage
 function bev(drink) {
