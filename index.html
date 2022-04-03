@@ -447,19 +447,45 @@
             </div>
           </div>
 
-          <!-- STORY TRANSITION 8-->
+          <!-- STORY TRANSITION 9-->
           <div class="page t9"></div>
 
+          <!-- STORY PAGE 10-->
           <div class="page ten">
             <div class="panel1">
-              The line between dream and reality blurs as the clutches of sleep slowly tighten their grasp. 
-              “It’s been a good day,” you think to yourself, or perhaps say in your dream, you are not quite sure. 
-              
-              You see the smiles of your classmates, hear the laughs of your friends, feel the warmth of the sun yet the cold of 
+              <div class="innerpanel" id="ten1">
+                The line between dream and reality blurs as the clutches of sleep slowly tighten their grasp. 
+              </div>
+              <div class="innerpanel" id="ten2">
+                “It’s been a good day,” you think to yourself, or perhaps say in your dream, you are not quite sure. 
+              </div>
+              <div class="innerpanel" id="ten3">
+                You see the smiles of your classmates, hear the laughs of your friends, feel the warmth of the sun yet the cold of 
               the air. 
-              
-              <span id="p10"></span>
+              </div>
+              <div class="innerpanel" id="ten4">
+                <span id="p10"></span>
+              </div>
             </div>
+
+            <!-- Animation 10 -->
+            <script>
+              $("page nine").ready(function(){
+                $("#buttons9").click(function(){
+                  $("#ten1").hide();  
+                  $("#ten2").hide();  
+                  $("#ten3").hide(); 
+                  $("#ten4").hide(); 
+                  $("#ten1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#ten2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#ten3").fadeIn(2000).fadeOut(2000, function(){
+                        $("#ten4").fadeIn(2000);
+                      });
+                    });
+                  });
+                });
+              });
+            </script>
 
             <div>
               <button onClick="results()">Continue to results...</button>
