@@ -47,17 +47,19 @@ hslide = (direction) => {
     );
 }
 
-var x = "David";
-var y = "The Communist Manifesto";
-var z = "Marx";
+var x;
+var y;
+var z;
+
+
 function get_vars() {
-    x = document.getElementById("friend_name").value;
-    document.getElementById("print_name").innerHTML = x;
-    y = document.getElementById("book").value;
-    document.getElementById("print_book").innerHTML = y;
-    z = document.getElementById("author").value;
-    document.getElementById("print_author").innerHTML = z;   
+    x = document.getElementById("friend_name").value; 
+
+    y = document.getElementById("book_name").value; 
+
+    z = document.getElementById("author_name").value; 
 }
+
 
 // Edit pg 2 on beverage
 function bev(drink) {
