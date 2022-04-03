@@ -47,6 +47,24 @@ hslide = (direction) => {
     );
 }
 
+var play = true;
+        
+var myAudio = document.getElementById("leson");
+window.addEventListener("keydown", onKeyDown, false);       
+function onKeyDown(event) {
+        switch (event.keyCode) {
+            case 32: //SpaceBar                    
+                if (play) {
+                    myAudio.pause();
+                    play = false;
+                } else {
+                    myAudio.play();
+                    play = true;
+                }
+                break;
+        }
+    return false;
+}
 
 function slidesettings() {
     document.getElementById("settings").style.top += translateAmount;
