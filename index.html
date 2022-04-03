@@ -11,20 +11,7 @@
 <body>
     <div class="container">
         <div class="pages">
-<<<<<<< HEAD
           
-=======
-          <div>
-            <form>
-              <label for="friend_name">The name of a close friend:</label><br>
-              <input type="text" id="friend_name" name="friend_name"><br>
-              <label for="book">The title of a book you like:</label><br>
-              <input type="text" id="book" name="book">
-              <label for="author">The author of said book:</label><br>
-              <input type="text" id="author" name="author">
-            </form> 
-          </div>      
->>>>>>> 62533794bc33132ef9c4858c3b8ba5be0bfb1d66
           <!-- STORY PAGE 1 -->
           <div class="page one">        
             <div class="panel2">
@@ -100,7 +87,7 @@
               });
             </script>
 
-            <div>
+            <div id = "buttons2">
               <button onClick="vslide('next', 'ind')">LoFi music would be perfect right now.</button>
               <button onClick="vslide('next', 'pro')">Let me catch up on that podcast I’ve been tuning in to. </button>
               <button onClick="vslide('next', 'dist')">I could use some hip hop to feel more awake. Where’s that RapCaviar playlist…</button>
@@ -115,21 +102,35 @@
            <!-- STORY PAGE 3 -->
 
           <div class="page three">
-            <div class="panel1">
-              The lecture hall is not precisely where you want to be right now, but work must be done and in due time, 
-              your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all of 
-              lecture unfocused, but not so close that you can hear the instructor’s breathing. You grasp onto the fragments
-              of conversation dancing around the room, find mild entertainment in catching brief whiffs of campus happenings 
-              and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into one voice. <br> <br>
-
-              Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into your bag.
-              <script>
-                $(document).ready(function(){
-                  $(this).load(function(){
-                    $(this).hide();
+            <div class="panel2">
+              <div class = "innerpanel" id="three1">The lecture hall is not precisely where you want to be right now, but work must be done and in due time, 
+                your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all of 
+                lecture unfocused, but not so close that you can hear the instructor’s breathing.
+              </div>
+              <div class = "innerpanel" id="three2"> You grasp onto the fragments
+                of conversation dancing around the room, find mild entertainment in catching brief whiffs of campus happenings 
+                and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into one voice.
+              </div>
+              <div class = "innerpanel" id="three3"> 
+                Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into your bag.
+              </div>
+              
+            <!-- Animation 3 -->
+            <script>
+              $("page three").ready(function(){
+                $("#buttons2").click(function(){
+                  $("#three1").hide();  
+                  $("#three2").hide();  
+                  $("#three3").hide();  
+                  $("#three1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#three2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#three3").fadeIn(2000);
+                    });
                   });
                 });
-              </script>
+              });
+            </script>
+              
             </div>
             <div>
               <button onClick="vslide('next', 'ind')">“My iPad has been one of the most useful things I’ve ever owned.” A few taps are all you need to get ready for class.</button>
@@ -152,9 +153,6 @@
               choice and freedom. <br> <br>
               Not that you’ll spend it doing much of anything meaningful, of course. 
             </div>
-<<<<<<< HEAD
-            <div>
-=======
 
             <!-- Animation 4 -->
             <script>
@@ -173,7 +171,6 @@
             </script>
 
             <div id = "buttons4">
->>>>>>> bbd46c871b94ab0c350289959ec5802e76dad635
               <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as well.” </button>
               <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My friend should also be free right now, let me give them a call.”</button>
               <button onCLick="vslide('next', 'calm')">“Maybe I’ll go back home and take a quick break, or even fold my laundry.”</button>
