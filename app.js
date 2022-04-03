@@ -47,6 +47,24 @@ hslide = (direction) => {
     );
 }
 
+var play = true;
+        
+var myAudio = document.getElementById("leson");
+window.addEventListener("keydown", onKeyDown, false);       
+function onKeyDown(event) {
+        switch (event.keyCode) {
+            case 32: //SpaceBar                    
+                if (play) {
+                    myAudio.pause();
+                    play = false;
+                } else {
+                    myAudio.play();
+                    play = true;
+                }
+                break;
+        }
+    return false;
+}
 
 function slidesettings() {
     document.getElementById("settings").style.top += translateAmount;
@@ -159,13 +177,13 @@ function friend(bool) {
 function results() {
     var max = Math.max(pro, ind, dist, calm);
     if (max == pro){
-        window.location.href="/art/framep1.png";
+        window.location.href="/art/result/ProcrastinatorResult.png";
     } else if (max == ind) {
-        window.location.href="/art/framep1.png";
+        window.location.href="/art/result/IndependentResult.png";
     } else if (max == dist) {
-        window.location.href="/art/framep1.png";
+        window.location.href="/art/result/ChaoticResult.png";
     } else {
-        window.location.href="/art/framep1.png";
+        window.location.href="/art/CalmResult.png";
     }
 }
 

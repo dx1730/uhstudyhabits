@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <!--
   <div class="audiopanel" id = "settings">
     <settingsbutton onClick = "play()">PLAY</settingsbutton>
     <audio loop id="audio" src="Maple.mp3"></audio>
@@ -18,29 +19,9 @@
     <settingsbutton onClick = "pause()">PAUSE</settingsbutton>
     <audio id="audio" src="Maple.mp3"></audio>
   </div>
+  -->
     <div class="container">
       <audio id="leson" src="Maple.mp3" autoplay="true" hidden="true" loop="true"></audio>
-      <script>
-        var play = true;
-        
-        var myAudio = document.getElementById("leson");
-        
-        function onKeyDown(event) {
-                switch (event.keyCode) {
-                    case 32: //SpaceBar                    
-                        if (play) {
-                            myAudio.pause();
-                            play = false;
-                        } else {
-                            myAudio.play();
-                            play = true;
-                        }
-                        break;
-                }
-          return false;
-        }
-        window.addEventListener("keydown", onKeyDown, false);
-        </script>
         <div class="pages">
           <div class = "page zero">
             <div class = "panel1">
@@ -48,12 +29,12 @@
                 <div class = "input">
                   The name of a close friend:<br>
                   <input type = "text" id = "friend_name"/><br>
-                  
                   A book you enjoy:<br>
                   <input type = "text" id = "book_name"><br>
                   Author of said book:<br>
                   <input type = "text" id = "author_name"><br>
-                  <button type = "button" onClick = "get_vars(); show_next();" id = "rmr">remember...</button>
+                  <button type = "button" onClick = "get_vars()" id = "rmr">remember...</button>
+                  <span>Press [space] to play/pause</span>
                 </div>
 
                 <script> 
@@ -274,6 +255,7 @@
             $("#buttons4").hide();
             $("#buttons4_next").hide();
             $("#story4_2").hide();
+            
             $("#four1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
               $("#four2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                 $("#four3").fadeIn(1000);
