@@ -37,6 +37,20 @@ button {
     display: block;
 }
 
+audiobutton {
+    position: relative;
+    padding: 2px 2px;
+    text-align: center;
+    /* margin: 20px 20px; */
+    width: 5%;
+    border: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-out;
+    display: block;
+}
 sms_button {
     margin: 20px auto;
     position: relative;
@@ -106,7 +120,7 @@ input[type=text] {
     border-bottom: 2px solid var(--accent-color);
     background-color: var(--bg-color);
     color: white;
-  }
+}
 
 .input[type=text]:focus {
     border: 3px solid var(--accent-color2);
@@ -137,6 +151,14 @@ input[type=text] {
     width: 100%;
     padding: 0%
 }
+audiopanel[type=text] {
+    padding: 5%;
+    border: none;
+    border-bottom: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
+    color: white;
+}
+
 .innerpanel {
     position: relative;
     top: 50%;
