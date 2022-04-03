@@ -7,7 +7,7 @@ var ind = 0;
 var dist = 0;
 var calm = 0;
 
-hslide = (direction, res) => {
+vslide = (direction, res) => {
     if (res == 'pro') {
         pro++;
         console.log("pro: " + pro);
@@ -24,14 +24,14 @@ hslide = (direction, res) => {
 
     direction === "next" ? translate -= translateAmount : translate += translateAmount;
     pages.forEach(
-        pages => (pages.style.transform = `translateX(${translate}%)`)
+        pages => (pages.style.transform = `translateY(${translate}%)`)
     );
 }
 
-vslide = (direction) => {
+hslide = (direction) => {
     direction === "next" ? translate -= translateAmount : translate += translateAmount;
     pages.forEach(
-        pages => (pages.style.transform = `translateY(${translate}%)`)
+        pages => (pages.style.transform = `translateX(${translate}%)`)
     );
 }
 
