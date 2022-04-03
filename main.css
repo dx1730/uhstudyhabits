@@ -36,6 +36,13 @@ button {
 button:hover {
     transform: scale(1.05);
 }
+
+.button-contain {
+    position: relative;
+    border-radius: 10px;
+    width: 50%;
+    padding: 2%;
+}
 .container {
     width: 100%;
     height: 100vh;
@@ -82,6 +89,26 @@ button:hover {
     background-color: rgba(128, 128, 128, 0.6);
 }
 
+.panel3 {
+    border-radius: 10px;
+    width: 40%;
+    height: 10%;
+    padding: 1%;
+    line-height: 1.3;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
+.panel4 {
+    border-radius: 10px;
+    width: 40%;
+    height: 10%;
+    padding: 1%;
+    line-height: 1.3;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
 .innerpanel {
     position: relative;
     top: 50%;
@@ -90,14 +117,14 @@ button:hover {
 
 .one{
     background-color: var(--p1-color);
-    background-image: url('/art/page1.png');
+    background-image: url('art/page1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .two{
     background-color: var(--p2-color);
-    background-image: url('/art/page2.png');
+    background-image: url('art/page2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
