@@ -8,6 +8,7 @@
     --accent-color: #c59cff;
     --accent-color2: #D6CA98;
     --bg-color: rgba(31, 3, 58, 0.7);
+    --bg-color-opaque: rgba(31, 3, 58, 1);
     --p0-color: rgba(31, 3, 58, 1);
     --p1-color: #91928f;
     --p2-color: #6d775d;
@@ -131,7 +132,11 @@ input[type=text] {
     background-color: var(--bg-color);
 }
 
-
+.audiopanel {
+    background-color: var(--bg-color-opaque);
+    width: 100%;
+    padding: 0%
+}
 .innerpanel {
     position: relative;
     top: 50%;
