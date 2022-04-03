@@ -31,7 +31,9 @@ vslide = (direction, res) => {
         calm++;
         console.log("calm: " + calm);
     }
-
+    if (direction === "none") {
+        return;
+    }
     direction === "next" ? translate -= translateAmount : translate += translateAmount;
     pages.forEach(
         pages => (pages.style.transform = `translateY(${translate}%)`)
@@ -45,19 +47,17 @@ hslide = (direction) => {
     );
 }
 
-function swaptext() {
-    var x = document.getElementById("one1");
-    if (x.innerHTML === "Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, the brick and concrete sheltering you from the frigid air outside.")
-    {
-        x.innerHTML = "The fragmented memories of last night’s dream fade out of your mind as concentration and focus take their place. A shame, it was a good dream, but even though the details are lost, a vague sense of happiness remains. You’ll even have time to indulge in breakfast today.";
-    }
-    else if (x.innerHTML === "The fragmented memories of last night’s dream fade out of your mind as concentration and focus take their place. A shame, it was a good dream, but even though the details are lost, a vague sense of happiness remains. You’ll even have time to indulge in breakfast today."){
-        x.innerHTML = "While you enjoy all of them, you only have one bottle. What will you have this morning?"
-    }
-    else {
-        x.innerHTML = "Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, the brick and concrete sheltering you from the frigid air outside."
-    }
-} 
+var x = "David";
+var y = "The Communist Manifesto";
+var z = "Marx";
+function get_vars() {
+    x = document.getElementById("friend_name").value;
+    document.getElementById("print_name").innerHTML = x;
+    y = document.getElementById("book").value;
+    document.getElementById("print_book").innerHTML = y;
+    z = document.getElementById("author").value;
+    document.getElementById("print_author").innerHTML = z;   
+}
 
 // Edit pg 2 on beverage
 function bev(drink) {
@@ -69,6 +69,24 @@ function bev(drink) {
         document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the crisp taste of the orange juice you had this morning. Hopefully there’s still some left in the carton.";
     } else {
         document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the rich aroma of [friend_name]’s coffee from earlier. Maybe you’ll get yourself a cup tomorrow to give it a try.";
+    }
+
+    if (drink == 'coffee' || drink == 'tea'){
+        document.getElementById("bev").innerHTML = "The warmth you feel in your soul brings you comfort, and reminds you why you love " + drink + " so much.";
+    } else {
+        document.getElementById("bev").innerHTML = "The coolness you feel in your soul sharpens your mind, and reminds you why you love " + drink + " so much.";
+    }
+}
+
+function scenario(num) {
+    if (num == 1) {
+        document.getElementById("four4").innerHTML = "The espresso is deeply aromatic, the milk steamed to a comforting warmth with a subtly frothy texture that brings structure and mouthfeel and a faint nutty sweetness. Your exceptional taste in coffee is subtly revealed to the rest of the patrons by the dainty paper cup you hold, exclusively used for cortados. A perfect pairing with the work of fine literature that is <em> " + y + "</em> by " + z;
+    } else if (num == 2) {
+        document.getElementById("four4").innerHTML = "You find " + x + " in Saieh Hall, basking in the sunlight of that one hallway with far too many windows, engrossed in the game of attempting to study while also watching yesterday’s basketball highlights. It’s a game that you are far too familiar with." + "\n" + "As you leave Saieh, you two agree to get lunch later."; 
+    } else if (num == 3) {
+        document.getElementById("four4").innerHTML = "Laundry doesn’t fold itself, and though tedious, it’s simple acts like folding laundry that remind you of your independence, but also your responsibilities.";
+    } else {
+        document.getElementById("four4").innerHTML = "Your devious plan lasted a whole fifteen minutes. Too bad " + x + " gave you away when they ran into you and asked you to get lunch later, and then the tour guide politely yet firmly asked you to leave. ";
     }
 
     if (drink == 'coffee' || drink == 'tea'){

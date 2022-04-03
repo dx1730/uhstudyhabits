@@ -27,14 +27,6 @@
                 </div>
 
                 <script> 
-                  function get_vars() {
-                      var x = document.getElementById("friend_name").value;
-                      document.getElementById("print_name").innerHTML = x;
-                      var y = document.getElementById("book").value;
-                      document.getElementById("print_book").innerHTML = y;
-                      var z = document.getElementById("author").value;
-                      document.getElementById("print_author").innerHTML = z;    
-                  }
                   $("page zero").ready(function () {
                     $("#rmr").click(function(){
                       $("#rmr").fadeOut(1000);
@@ -237,14 +229,20 @@
         </script>
 
         <div class="button-contain" id="buttons4">
-          <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as
+          <button onClick="vslide('none', 'ind'); scenario(1)">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as
             well.” </button>
-          <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My
+          <button onCLick="vslide('none', 'dist'); scenario(2)">“I’m sure my friends are somewhere to be found out and about. My
             friend should also be free right now, let me give them a call.”</button>
-          <button onCLick="vslide('next', 'calm')">“Maybe I’ll go back home and take a quick break, or even fold my
+          <button onCLick="vslide('none', 'calm'); scenario(3)">“Maybe I’ll go back home and take a quick break, or even fold my
             laundry.”</button>
-          <button onCLick="vslide('next', 'pro')">“I’ll follow a tour guide around for a while and pretend to be a high
+          <button onCLick="vslide('none', 'pro'); scenario(4)">“I’ll follow a tour guide around for a while and pretend to be a high
             schooler, I wonder how long it would take for them to notice.”</button>
+        </div>
+
+        <div class = "panel2">
+          <div class="innerpanel" id="four4">
+
+          </div>
         </div>
       </div>
 
