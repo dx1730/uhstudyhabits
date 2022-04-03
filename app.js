@@ -49,6 +49,8 @@ function onKeyDown(event) {
             case 32: //spacebar
                 event.preventDefault();
 
+                case 9:
+                    event.preventDefault();
             case 192: //tilde                   
                 if (play) {
                     myAudio.pause();
@@ -113,7 +115,7 @@ function bev(drink) {
 
 function scenario(num) {
     if (num == 1) {
-        document.getElementById("four4").innerHTML = "The espresso is deeply aromatic, the milk steamed to a comforting warmth with a subtly frothy texture that brings structure and mouthfeel and a faint nutty sweetness. Your exceptional taste in coffee is subtly revealed to the rest of the patrons by the dainty paper cup you hold, exclusively used for cortados. A perfect pairing with the work of fine literature that is <em> " + y + "</em> by " + z;
+        document.getElementById("four4").innerHTML = "The espresso is deeply aromatic, the milk steamed to a comforting warmth with a subtly frothy texture that brings structure and mouthfeel and a faint nutty sweetness. Your exceptional taste in coffee is subtly revealed to the rest of the patrons by the dainty paper cup you hold, exclusively used for cortados. A perfect pairing with the work of fine literature that is <em> " + y + "</em> by " + z+ ".";
     } else if (num == 2) {
         document.getElementById("four4").innerHTML = "You find " + x + " in Saieh Hall, basking in the sunlight of that one hallway with far too many windows, engrossed in the game of attempting to study while also watching yesterday’s basketball highlights. It’s a game that you are far too familiar with." + "\n" + "As you leave Saieh, you two agree to get lunch later."; 
     } else if (num == 3) {
