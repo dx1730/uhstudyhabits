@@ -40,7 +40,7 @@
                 });
               </script>
             </div>
-            <div>
+            <div id = "buttons1">
               <button onClick="vslide('next', 'none'); bev('coffee')">Coffee: a rich, hearty aroma that offers warmth in the frigid weather.</button>
               <button onClick="vslide('next', 'none'); bev('tea')">Tea: soothing and refreshing, with a hint of herbal freshness.</button>
               <button onClick="vslide('next', 'none')">Orange Juice: sweet, refreshing, and full of vitamin C to keep yourself healthy and happy.</button>
@@ -55,26 +55,30 @@
           <!-- STORY PAGE 2 -->
 
           <div class="page two">
-            <div class="panel1">
-              <div id="two1"> As simple as your college life may seem, you are looking forward to tackling the everyday 
+            <div class="panel2">
+              <div class = "innerpanel" id="two1"> As simple as your college life may seem, you are looking forward to tackling the everyday 
                 challenges that may become the highlights, and mishaps, of your day. With your bottle full 
                 and your bag packed, you head out the front door, greeted by the cold, refreshing air.
               </div>
-              <div id="two2"> 
+              <div class = "innerpanel" id="two2"> 
                 <span id="bev"></span>
               </div>
-              <div id="two3"> 
+              <div class = "innerpanel" id="two3"> 
                 You find yourself reaching for your headphones. “Maybe I should listen to something.”
               </div>
             </div>
             <script>
               $("page two").ready(function(){
-                $("#two1").hide();  
-                $("#two2").hide();  
-                $("#two3").hide();  
-                $("#two1").fadeIn(2000).fadeOut(2000);
-                $("#two2").delay(4000).fadeIn(2000).fadeOut(2000);
-                $("#two3").delay(8000).fadeIn(2000);
+                $("#buttons1").click(function(){
+                  $("#two1").hide();  
+                  $("#two2").hide();  
+                  $("#two3").hide();  
+                  $("#two1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#two2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#two3").fadeIn(2000);
+                    });
+                  });
+                });
               });
             </script>
             <div>

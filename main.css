@@ -75,52 +75,52 @@ button:hover {
 
 .one{
     background-color: black;
-    background-image: url('../art/framep1.png');
+    background-image: url('art/framep1.png');
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .two{
     background-color: black;
-    background-image: url('../art/framep2.png');
+    background-image: url('art/framep2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .three{
     background-color: black;
-    background-image: url('../art/framep3.png');
+    background-image: url('art/framep3.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .four{
     background-color: black;
-    background-image: url('../art/framep4.png');
+    background-image: url('art/framep4.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .five{
     background-color: black;
-    background-image: url('../art/framep5.png');
+    background-image: url('art/framep5.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .six{
     background-color: black;
-    background-image: url('../art/framep6.png');
+    background-image: url('art/framep6.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-
 /*Transitions*/
 .t1{
     background-color: black;
-    background-image: url('../art/transition1.png');
+    background-image: url('art/transition1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -128,7 +128,7 @@ button:hover {
 }
 .t2{
     background-color: black;
-    background-image: url('../art/transition2.png');
+    background-image: url('art/transition2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -136,7 +136,7 @@ button:hover {
 
 .t3{
     background-color: black;
-    background-image: url('../art/transition3.png');
+    background-image: url('art/transition3.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
