@@ -12,12 +12,28 @@
 
 <body>
     <div class="container">
-      <div class="audiopanel">
-          <input type="button" value="PLAY" onclick="play()">
-          <audio loop id="audio" src="Maple.mp3"></audio>
-          <input type="button" value="PAUSE" onclick="pause()">
-          <audio id="audio" src="Maple.mp3"></audio>
-      </div>
+      <audio id="leson" src="Maple.mp3" autoplay="true" hidden="true" loop="true"></audio>
+      <script>
+        var play = true;
+        
+        var myAudio = document.getElementById("leson");
+        
+        function onKeyDown(event) {
+                switch (event.keyCode) {
+                    case 32: //SpaceBar                    
+                        if (play) {
+                            myAudio.pause();
+                            play = false;
+                        } else {
+                            myAudio.play();
+                            play = true;
+                        }
+                        break;
+                }
+          return false;
+        }
+        window.addEventListener("keydown", onKeyDown, false);
+        </script>
         <div class="pages">
           <div class = "page zero">
             <div class = "panel1">
