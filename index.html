@@ -205,7 +205,7 @@
       <div class="page t3"></div>
 
       <!-- STORY PAGE 4 -->
-      <div class="page four">
+      <div class="page four" id = "story4_1">
         <div class="panel2">
           <div class="innerpanel" id="four1">
             Everyone files out of the room in the usual ordered chaos, your friends in a hurry to catch
@@ -221,22 +221,6 @@
           </div>
         </div>
 
-        <!-- Animation 4 -->
-        <script>
-          $("page four").ready(function () {
-            $("#buttons3").click(function () {
-              $("#four1").hide();
-              $("#four2").hide();
-              $("#four3").hide();
-              $("#four1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#four2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#four3").fadeIn(2000);
-                });
-              });
-            });
-          });
-        </script>
-
         <div class="button-contain" id="buttons4">
           <button onClick="vslide('none', 'ind'); scenario(1)">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as
             well.” </button>
@@ -248,12 +232,44 @@
             schooler, I wonder how long it would take for them to notice.”</button>
         </div>
 
-        <div class = "panel2">
+        <div class = "panel2" id = "story4_2">
           <div class="innerpanel" id="four4">
 
           </div>
         </div>
+
+        <div class="button-contain" id="buttons4_next">
+          <button onClick="vslide('next', 'na')">“next...”</button>
+        </div>
+
       </div>
+
+      <!-- Animation 4 -->
+      <script>
+        $("page four").ready(function () {
+          $("#buttons3").click(function () {
+            $("#four1").hide();
+            $("#four2").hide();
+            $("#four3").hide();
+            $("#buttons4").hide();
+            $("#buttons4_next").hide();
+            $("#story4_2").hide();
+            $("#four1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+              $("#four2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#four3").fadeIn(2000);
+                $("#buttons4").delay(2000).fadeIn(2000);
+              });
+            });
+          });
+
+          $("#buttons4").click(function (){
+            $("#buttons4").fadeOut(500, function(){
+              $("#story4_2").fadeIn(500);
+              $("#buttons4_next").delay(500).fadeIn(500);
+            });
+          });
+        });
+      </script>
 
       <!-- STORY TRANSITION 4-->
       <div class="page t4"></div>
