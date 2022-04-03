@@ -45,7 +45,19 @@ hslide = (direction) => {
     );
 }
 
-
+function swaptext() {
+    var x = document.getElementById("one1");
+    if (x.innerHTML === "Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, the brick and concrete sheltering you from the frigid air outside.")
+    {
+        x.innerHTML = "The fragmented memories of last night’s dream fade out of your mind as concentration and focus take their place. A shame, it was a good dream, but even though the details are lost, a vague sense of happiness remains. You’ll even have time to indulge in breakfast today.";
+    }
+    else if (x.innerHTML === "The fragmented memories of last night’s dream fade out of your mind as concentration and focus take their place. A shame, it was a good dream, but even though the details are lost, a vague sense of happiness remains. You’ll even have time to indulge in breakfast today."){
+        x.innerHTML = "While you enjoy all of them, you only have one bottle. What will you have this morning?"
+    }
+    else {
+        x.innerHTML = "Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, the brick and concrete sheltering you from the frigid air outside."
+    }
+} 
 
 // Edit pg 2 on beverage
 function bev(drink) {
