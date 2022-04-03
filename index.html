@@ -33,8 +33,8 @@
                   <input type = "text" id = "book_name"><br>
                   Author of said book:<br>
                   <input type = "text" id = "author_name"><br>
-                  <button type = "button" onClick = "get_vars()" id = "rmr">remember...</button>
-                  <span>Press [space] to play/pause</span>
+                  <button type = "button" onClick = "get_vars(); show_next();" id = "rmr">remember...</button>
+                  <span>Press [space] to play/pause</span> 
                 </div>
 
                 <script> 
@@ -44,11 +44,9 @@
                     });
                   });
                 </script>
-                  
               </div>
-              <div class = "innerpanel" id = zero2>
-                <button onClick="vslide('next', 'none'); slidesettings()">next...</button>
-              </div>
+
+              <div id="zero2" class="innerpanel"></div>
             </div>
           </div>
           
@@ -67,7 +65,7 @@
             for class. You’ll even have time to indulge in breakfast today.
           </div>
 
-          <div class = " innerpanel" id="one3"> While you enjoy all of them, you only have one bottle. What will you have this morning?
+          <div class = "innerpanel" id="one3"> While you enjoy all of them, you only have one bottle. What will you have this morning?
           </div>
         
           <!-- Animation 1 -->
