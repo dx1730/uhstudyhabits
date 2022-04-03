@@ -27,13 +27,15 @@
                 While you enjoy all of them, you only have one bottle. What will you have this morning?
               </div>              
               <script>
-                $(document).ready(function(){
+                $("page one").ready(function(){
                   $("#one1").hide();  
                   $("#one2").hide();  
                   $("#one3").hide();  
-                  $("#one1").fadeIn(2000).fadeOut(2000);
-                  $("#one2").delay(4000).fadeIn(2000).fadeOut(2000);
-                  $("#one3").delay(8000).fadeIn(2000);
+                  $("#one1").fadeIn(2000).fadeOut(2000, function(){
+                    $("#one2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#one3").fadeIn(2000);
+                    });
+                  });  
                 });
               </script>
             </div>
@@ -53,19 +55,27 @@
 
           <div class="page two">
             <div class="panel1">
-              <div id="first"> As simple as your college life may seem, you are looking forward to tackling the everyday 
+              <div id="two1"> As simple as your college life may seem, you are looking forward to tackling the everyday 
                 challenges that may become the highlights, and mishaps, of your day. With your bottle full 
                 and your bag packed, you head out the front door, greeted by the cold, refreshing air.
               </div>
-              <br> 
-              <div id="second"> 
+              <div id="two2"> 
                 <span id="bev"></span>
               </div>
-              <br>
-              <div id="third"> 
+              <div id="two3"> 
                 You find yourself reaching for your headphones. “Maybe I should listen to something.”
               </div>
             </div>
+            <script>
+              $("page two").ready(function(){
+                $("#two1").hide();  
+                $("#two2").hide();  
+                $("#two3").hide();  
+                $("#two1").fadeIn(2000).fadeOut(2000);
+                $("#two2").delay(4000).fadeIn(2000).fadeOut(2000);
+                $("#two3").delay(8000).fadeIn(2000);
+              });
+            </script>
             <div>
               <button onClick="vslide('next', 'ind')">LoFi music would be perfect right now.</button>
               <button onClick="vslide('next', 'pro')">Let me catch up on that podcast I’ve been tuning in to. </button>
@@ -89,6 +99,8 @@
               and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into one voice. <br> <br>
 
               Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into your bag.
+<<<<<<< HEAD
+=======
               <script>
                 $(document).ready(function(){
                   $(this).load(function(){
@@ -98,10 +110,12 @@
               </script>
             </div>
             <div>
+>>>>>>> 4c1511ee6ba466a04f2f64e5f71136bd167c7268
               <button onClick="vslide('next', 'ind')">“My iPad has been one of the most useful things I’ve ever owned.” A few taps are all you need to get ready for class.</button>
               <button onClick="vslide('next', 'calm')">“Does my laptop have charge? Ah, yes it does.” Your hands are already dancing across the keyboard even before the lecture has started.</button>
               <button onClick="vslide('next', 'dist')">“I’m running out of paper in this notebook, and my highlighters are almost done too.” Note-taking is an artform, and you are the artist. Gel pens and highlighters on college-rule are the medium.</button>
               <button onClick="vslide('next', 'pro')">“It’s okay. I’ll pay more attention without anything in front of me to distract, and the lecture notes will be online later today anyways.” Truly the minimalist approach..</button>
+            
             </div>
           </div>
 
