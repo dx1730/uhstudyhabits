@@ -24,19 +24,19 @@
       <audio id="leson" src="Maple.mp3" autoplay="true" hidden="true" loop="true"></audio>
         <div class="pages">
           <div class = "page zero">
+            <h1> it's time to study at uchicago!</h1>
             <div class = "panel1">
               <div class = "innerpanel" id = zero1>
                 <div class = "input">
-                  The name of a close friend:<br>
+                  the name of a close friend:<br>
                   <input type = "text" id = "friend_name"/><br>
-                  A book you enjoy:<br>
+                  a book you enjoy:<br>
                   <input type = "text" id = "book_name"><br>
-                  Author of said book:<br>
+                  author of said book:<br>
                   <input type = "text" id = "author_name"><br>
                   <button type = "button" onClick = "get_vars(); show_next();" id = "rmr">remember...</button>
-                  <span>Press [space] to play/pause</span> 
+                  <span>Press [~] to play/pause</span>
                 </div>
-
                 <script> 
                   $("page zero").ready(function () {
                     $("#rmr").click(function(){
@@ -56,13 +56,14 @@
       <div class="page one">
         <div class="panel2">
           <div class="innerpanel" id="one1">
-            Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, the brick and concrete sheltering you from the frigid air outside.
+            Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home.
+            Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, and the frigid air outside beckons to you, locked outside by walls of brick and concrete.
           </div>
           
-          <div class = " innerpanel" id="one2"> The fragmented memories of last night’s dream fade out of your mind as
-            concentration and focus take their place. A shame, it was a good dream, but even though the details are lost, a vague sense of
-            happiness remains. “At least it was a happy dream,” you think to yourself as you get ready
-            for class. You’ll even have time to indulge in breakfast today.
+          <div class = " innerpanel" id="one2"> 
+            The fragmented memories of last night’s dream fade out of your mind as concentration and focus take their place. 
+            A shame, it was a good dream, but even though the details are lost, a vague sense of happiness remains. 
+            “At least it was a happy dream,” you think to yourself as you get ready for class. You’ll even have time to indulge in breakfast today. 
           </div>
 
           <div class = "innerpanel" id="one3"> While you enjoy all of them, you only have one bottle. What will you have this morning?
@@ -76,8 +77,8 @@
               $("#one3").hide();
               $("#buttons1").hide();
               $("#zero2").click(function(){
-                $("#one1").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#one2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#one1").delay(1000).fadeIn(1000).delay(5000).fadeOut(1000, function () {
+                  $("#one2").fadeIn(1000).delay(8000).fadeOut(1000, function () {
                     $("#one3").fadeIn(1000);
                     $("#buttons1").delay(1000).fadeIn(500);
                   });
@@ -93,7 +94,7 @@
             frigid weather.</button>
           <button onClick="vslide('next', 'none'); bev('tea'); slidesettings()">Tea: soothing and refreshing, with a hint of herbal
             freshness.</button>
-          <button onClick="vslide('next', 'none'); bev('orange juice'); slidesettings()">Orange Juice: sweet, refreshing, and full of
+          <button onClick="vslide('next', 'none'); bev('orange juice'); slidesettings()">Orange juice: sweet, refreshing, and full of
             vitamin C to keep yourself healthy and happy.</button>
           <button onClick="vslide('next', 'none'); bev('water'); slidesettings()">Water: The simple choice to wash away
             drowsiness.</button>
@@ -107,10 +108,8 @@
 
       <div class="page two">
         <div class="panel2">
-          <div class="innerpanel" id="two1"> As simple as your college life may seem, you are looking forward to
-            tackling the everyday
-            challenges that may become the highlights, and mishaps, of your day. With your bottle full
-            and your bag packed, you head out the front door, greeted by the cold, refreshing air.
+          <div class="innerpanel" id="two1"> The sunlight proves a bit of comfort against the cold, biting at the edges of your ears and the tips of your fingers.
+            With your bottle full and your bag packed, you head out the front door, greeted by the cold, refreshing air.
           </div>
           <div class="innerpanel" id="two2">
             <span id="bev"></span>
@@ -127,10 +126,10 @@
               $("#two2").hide();
               $("#two3").hide();
               $("#buttons2").hide();
-              $("#two1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#two2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#two1").delay(1000).fadeIn(1000).delay(8000).fadeOut(1000, function () {
+                $("#two2").fadeIn(1000).delay(3000).fadeOut(1000, function () {
                   $("#two3").fadeIn(1000);
-                  $("#buttons2").delay(1000).fadeIn(500);
+                  $("#buttons2").delay(3000).fadeIn(500);
                 });
               });
             });
@@ -156,14 +155,14 @@
         <div class="panel2">
           <div class="innerpanel" id="three1"> The lecture hall is not precisely where you want to be right now, but
             work must be done and in due time,
-            your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all
+            your diligence will surely pay off. You claim the seat you often sit in, not so far that you’ll spend all
             of
             lecture unfocused, but not so close that you can hear the instructor’s breathing.
           </div>
-          <div class="innerpanel" id="three2"> You grasp onto the fragments of conversation dancing around the room,
-            find mild entertainment in catching brief whiffs of campus happenings
-            and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into
-            one voice.
+          <div class="innerpanel" id="three2"> ou grasp onto the fragments of conversation dancing around the room, 
+            find mild entertainment in catching brief whiffs of campus happenings,
+            listen to everyone and everything as all individuals merge into one singular voice. 
+
           </div>
 
           <div class="innerpanel" id="three3">
@@ -173,14 +172,13 @@
         </div>
 
         <div class="button-contain" id="buttons3">
-          <button onClick="vslide('next', 'ind')">“My iPad has been one of the most useful things I’ve ever owned.” A
-            few taps are all you need to get ready for class.</button>
-          <button onClick="vslide('next', 'calm')">“Does my laptop have charge? Ah, yes it does.” Your hands are already
-            dancing across the keyboard even before the lecture has started.</button>
-          <button onClick="vslide('next', 'dist')">“I’m running out of paper in this notebook, and my highlighters are
-            almost done too.” Note-taking is an artform, and you are the artist. Gel pens and highlighters on
+          <button onClick="vslide('next', 'ind')">"My iPad is great. A
+            few taps are all it takes to get ready for class."</button>
+          <button onClick="vslide('next', 'calm')">Your hands are already
+            dancing across the keyboard of your laptop even before the lecture has started.</button>
+          <button onClick="vslide('next', 'dist')">Note-taking is an artform, and you are the artist. Gel pens and highlighters on
             college-rule are the medium.</button>
-          <button onClick="vslide('next', 'pro')">“It’s okay. I’ll pay more attention without anything in front of me to
+          <button onClick="vslide('next', 'pro')">“I’ll pay more attention without anything in front of me to
             distract, and the lecture notes will be online later today anyways.” Truly the minimalist
             approach..</button>
         </div>
@@ -193,10 +191,10 @@
               $("#three2").hide();
               $("#three3").hide();
               $("#buttons3").hide()
-              $("#three1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#three2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#three1").delay(1000).fadeIn(1000).delay(7000).fadeOut(1000, function () {
+                $("#three2").fadeIn(1000).delay(7000).fadeOut(1000, function () {
                   $("#three3").fadeIn(1000);
-                  $("#buttons3").delay(1000).fadeIn(500);
+                  $("#buttons3").delay(3000).fadeIn(500);
                 });
               });
             });
@@ -243,7 +241,7 @@
         </div>
 
         <div class="button-contain" id="buttons4_next">
-          <button onClick="vslide('next', 'na')">“next...”</button>
+          <button onClick="vslide('next', 'na')">“next”</button>
         </div>
 
       </div>
@@ -258,9 +256,8 @@
             $("#buttons4").hide();
             $("#buttons4_next").hide();
             $("#story4_2").hide();
-            
-            $("#four1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-              $("#four2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+            $("#four1").delay(1000).fadeIn(1000).delay(3000).fadeOut(1000, function () {
+              $("#four2").fadeIn(1000).delay(4000).fadeOut(1000, function () {
                 $("#four3").fadeIn(1000);
                 $("#buttons4").delay(1000).fadeIn(500);
               });
@@ -283,7 +280,7 @@
       <div class="page five">
         <div class="panel2">
           <div class="innerpanel" id="five1">
-            Lecture crawls along as you count the seconds away.
+            You've been sitting around bored, lecture crawling along as you count the seconds away.
           </div>
           <div class="innerpanel" id="five2">
             Yet as you walk out of the lecture hall you realize that time slipped by faster than you expect, reflected
@@ -312,10 +309,10 @@
               $("#five3").hide();
               $("#five3").hide();
               $("#buttons5").hide();
-              $("#five1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#five2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#five1").delay(1000).fadeIn(1000).delay(3000).fadeOut(1000, function () {
+                $("#five2").fadeIn(1000).delay(5000).fadeOut(1000, function () {
                   $("#five3").fadeIn(1000);
-                  $("#buttons5").delay(1000).fadeIn(500);
+                  $("#buttons5").delay(3000).fadeIn(500);
                 });
               });
             });
@@ -338,9 +335,7 @@
           <div class="innerpanel" id="six2">
             The soft golden glow, the soothing fabric of your scarf, the long, dark shadows
             cast by campus oaks, the coldness of the crisp spring air, the raw feeling of
-            simply existing, they surround you, enveloping not just you, but also the girl
-            with the red mittens walking a few paces behind, the two instructors with coffees
-            in hand approaching from your left, the young man briskly cycling past.
+            simply existing, they surround you, envelop you.
           </div>
 
           <div class="innerpanel" id="six3">
@@ -366,7 +361,7 @@
         <div class="button-contain" id="buttons6">
           <button onClick="vslide('next', 'pro'); loc('A')">“I’ll head to the A level of the Reg and do some work
             there.” </button>
-          <button onClick="vslide('next', 'dist'); loc('B')">““Crerar sounds like a great place to stay for a couple of
+          <button onClick="vslide('next', 'dist'); loc('B')">“Crerar sounds like a great place to stay for a couple of
             hours. It’s quite comfortable there.”</button>
           <button onClick="vslide('next', 'calm'); loc('C')">“Let me head to a cafe, a little white noise really puts me
             in focus state.”</button>
@@ -385,12 +380,12 @@
             $("#six4").hide();
             $("#six5").hide();
             $("#buttons6").hide();
-            $("#six1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-              $("#six2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#six3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#six4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+            $("#six1").delay(1000).fadeIn(1000).delay(8000).fadeOut(1000, function () {
+              $("#six2").fadeIn(1000).delay(10000).fadeOut(1000, function () {
+                $("#six3").fadeIn(1000).delay(10000).fadeOut(1000, function () {
+                  $("#six4").fadeIn(1000).delay(8000).fadeOut(1000, function () {
                     $("#six5").fadeIn(1000);
-                    $("#buttons6").delay(1000).fadeIn(500);
+                    $("#buttons6").delay(8000).fadeIn(500);
                   });
                 });
               });
@@ -423,16 +418,16 @@
           <div class="innerpanel" id="seven6">
             In the midst of dwelling over a rather difficult question on your problem set that has been keeping you a
             little frustrated and
-            a little too deep in thought, you heard your phone buzz, and [friend_name] is asking where you are, and what
+            a little too deep in thought, you heard your phone buzz, and <span id = "print_name"></span> is asking where you are, and what
             you’re doing.
           </div>
         </div>
 
         <div class="button-contain" id="buttons7">
-          <button onClick="vslide('next', 'pro'); friend(true)">“im at <span id="loc1"></span> and super bored lets do
-            smth”</button>
-          <button onClick="vslide('next', 'dist'); friend(true)">“wanna study w me at <span id="loc2"></span> might be
-            here late tho”</button>
+          <button onClick="vslide('next', 'pro'); friend(true)">“I'm at <span id="loc1"></span> and super bored, lets do
+            something.”</button>
+          <button onClick="vslide('next', 'dist'); friend(true)">“Wanna study at <span id="loc2"></span>? I might be
+            here late.”</button>
           <button onClick="vslide('next', 'calm'); friend(false)">“Im at <span id="loc3"></span> but really busy, wanna
             do tomorrow instead?”</button>
           <button onClick="vslide('next', 'ind'); friend(false)">… (don’t respond)</button>
@@ -480,7 +475,7 @@
             setting sun has since been replaced by the faint glow of a crescent moon on this beautiful cloudless night.
           </div>
           <div class="innerpanel" id="eight3">
-            A quick glance at the clock tells you that you’ve worked until
+            A quick glance at the clock tells you that you’ve worked until:
           </div>
         </div>
 
@@ -534,7 +529,7 @@
 
         <div class="button-contain" id="buttons9">
           <button onClick="vslide('next', 'ind')">“I’ll read a book, perhaps a couple more chapters of
-            [book_name]”</button>
+            <span id = print_book></span>.”</button>
           <button onClick="vslide('next', 'calm')">“I’ll listen to music until I fall asleep, and give myself a chance
             to really relax.”</button>
           <button onClick="vslide('next', 'pro')">“It’s been a while since I last called my parents and caught up with
@@ -614,7 +609,7 @@
         </script>
 
       </div>
-
+ 
     </div>
   </div>
   <script src="app.js"></script>

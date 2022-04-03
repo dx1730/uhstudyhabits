@@ -7,15 +7,6 @@ var ind = 0;
 var dist = 0;
 var calm = 0;
 
-var test = "hello, world!";
-
-var $jqName = $('.name');
-var $jqValue = $('.jqValue');
-
-$jqName.on('input', function(event){
-  $jqValue.html($jqName.val());
-});
-
 
 vslide = (direction, res) => {
     if (res == 'pro') {
@@ -48,12 +39,19 @@ hslide = (direction) => {
 }
 
 var play = true;
+
+var show_panels = true;
         
 var myAudio = document.getElementById("leson");
-window.addEventListener("keydown", onKeyDown, false);       
+window.addEventListener("keydown", onKeyDown, false);
 function onKeyDown(event) {
         switch (event.keyCode) {
-            case 32: //SpaceBar                    
+            case 32: //spacebar
+                event.preventDefault();
+
+                case 9:
+                    event.preventDefault();
+            case 192: //tilde                   
                 if (play) {
                     myAudio.pause();
                     play = false;
@@ -66,28 +64,22 @@ function onKeyDown(event) {
     return false;
 }
 
-function slidesettings() {
-    document.getElementById("settings").style.top += translateAmount;
-}
 
-function nxt() {
-    var val = (parseInt(document.getElementById('slide').style.left, 10) || 0) + 50;
-    document.getElementById('slide').style.left = val + 'px';
-}
 
-var x;
-var y;
-var z;
 
-var friend_name;
-var book_name;
-var author_name;
+var x = "Jake Wei";
+var y = "Dune";
+var z = "Frank Herbert";
 
+
+document.getElementById("print_name").innerHTML = x;
+document.getElementById("print_book").innerHTML = y;
+document.getElementById("print_author").innerHTML = z;
 
 function get_vars() {
     x = document.getElementById("friend_name").value; 
     friend_name = document.getElementById("friend_name").value; 
-
+    
     y = document.getElementById("book_name").value; 
     book_name = document.getElementById("book_name").value;
 
@@ -100,6 +92,8 @@ function show_next() {
     document.getElementById("zero2").innerHTML = "<button onClick=\"vslide('next', 'none'); slidesettings()\">next...</button>";
 }
 
+
+
 // Edit pg 2 on beverage
 function bev(drink) {
     if (drink == 'coffee') {
@@ -109,7 +103,7 @@ function bev(drink) {
     } else if (drink == 'orange juice') {
         document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the crisp taste of the orange juice you had this morning. Hopefully there’s still some left in the carton.";
     } else {
-        document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the rich aroma of [friend_name]’s coffee from earlier. Maybe you’ll get yourself a cup tomorrow to give it a try.";
+        document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the rich aroma of " + x + "'s coffee from earlier. Maybe you’ll get yourself a cup tomorrow to give it a try.";
     }
 
     if (drink == 'coffee' || drink == 'tea'){
@@ -121,7 +115,7 @@ function bev(drink) {
 
 function scenario(num) {
     if (num == 1) {
-        document.getElementById("four4").innerHTML = "The espresso is deeply aromatic, the milk steamed to a comforting warmth with a subtly frothy texture that brings structure and mouthfeel and a faint nutty sweetness. Your exceptional taste in coffee is subtly revealed to the rest of the patrons by the dainty paper cup you hold, exclusively used for cortados. A perfect pairing with the work of fine literature that is <em> " + y + "</em> by " + z;
+        document.getElementById("four4").innerHTML = "The espresso is deeply aromatic, the milk steamed to a comforting warmth with a subtly frothy texture that brings structure and mouthfeel and a faint nutty sweetness. Your exceptional taste in coffee is subtly revealed to the rest of the patrons by the dainty paper cup you hold, exclusively used for cortados. A perfect pairing with the work of fine literature that is <em> " + y + "</em> by " + z+ ".";
     } else if (num == 2) {
         document.getElementById("four4").innerHTML = "You find " + x + " in Saieh Hall, basking in the sunlight of that one hallway with far too many windows, engrossed in the game of attempting to study while also watching yesterday’s basketball highlights. It’s a game that you are far too familiar with." + "\n" + "As you leave Saieh, you two agree to get lunch later."; 
     } else if (num == 3) {
@@ -161,7 +155,7 @@ function friend(bool) {
     if (bool == true) {
         msg = "Time spent alongside a close friend is time well spent. Your lively conversation might have \
         earned a couple dirty looks and sideways glances but that is no reason for you to be concerned with \
-        the trivial opinions of passing strangers. And as you and [friend_name] slip back into more academic \
+        the trivial opinions of passing strangers. And as you and " + x + " slip back into more academic \
         pursuits, you are reminded of how easy it is to take for granted the silent presence of a close friend.";
     } else {
         msg = "As much as you enjoy spending time with friends, work has to take first priority sometimes. \
