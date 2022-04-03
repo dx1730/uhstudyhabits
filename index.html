@@ -11,29 +11,17 @@
 </head>
 
 <body>
+  <!--
+  <div class="audiopanel" id = "settings">
+    <settingsbutton onClick = "play()">PLAY</settingsbutton>
+    <audio loop id="audio" src="Maple.mp3"></audio>
+    <br>
+    <settingsbutton onClick = "pause()">PAUSE</settingsbutton>
+    <audio id="audio" src="Maple.mp3"></audio>
+  </div>
+  -->
     <div class="container">
       <audio id="leson" src="Maple.mp3" autoplay="true" hidden="true" loop="true"></audio>
-      <script>
-        var play = true;
-        
-        var myAudio = document.getElementById("leson");
-        
-        function onKeyDown(event) {
-                switch (event.keyCode) {
-                    case 32: //SpaceBar                    
-                        if (play) {
-                            myAudio.pause();
-                            play = false;
-                        } else {
-                            myAudio.play();
-                            play = true;
-                        }
-                        break;
-                }
-          return false;
-        }
-        window.addEventListener("keydown", onKeyDown, false);
-        </script>
         <div class="pages">
           <div class = "page zero">
             <div class = "panel1">
@@ -41,12 +29,12 @@
                 <div class = "input">
                   The name of a close friend:<br>
                   <input type = "text" id = "friend_name"/><br>
-                  
                   A book you enjoy:<br>
                   <input type = "text" id = "book_name"><br>
                   Author of said book:<br>
                   <input type = "text" id = "author_name"><br>
                   <button type = "button" onClick = "get_vars()" id = "rmr">remember...</button>
+                  <span>Press [space] to play/pause</span>
                 </div>
 
                 <script> 
@@ -59,7 +47,7 @@
                   
               </div>
               <div class = "innerpanel" id = zero2>
-                <button onClick="vslide('next', 'none')">next...</button>
+                <button onClick="vslide('next', 'none'); slidesettings()">next...</button>
               </div>
             </div>
           </div>
@@ -103,13 +91,13 @@
       </div>
         
         <div class="button-contain" id="buttons1">
-          <button onClick="vslide('next', 'none'); bev('coffee')">Coffee: a rich, hearty aroma that offers warmth in the
+          <button onClick="vslide('next', 'none'); bev('coffee'); slidesettings()">Coffee: a rich, hearty aroma that offers warmth in the
             frigid weather.</button>
-          <button onClick="vslide('next', 'none'); bev('tea')">Tea: soothing and refreshing, with a hint of herbal
+          <button onClick="vslide('next', 'none'); bev('tea'); slidesettings()">Tea: soothing and refreshing, with a hint of herbal
             freshness.</button>
-          <button onClick="vslide('next', 'none'); bev('orange juice')">Orange Juice: sweet, refreshing, and full of
+          <button onClick="vslide('next', 'none'); bev('orange juice'); slidesettings()">Orange Juice: sweet, refreshing, and full of
             vitamin C to keep yourself healthy and happy.</button>
-          <button onClick="vslide('next', 'none'); bev('water')">Water: The simple choice to wash away
+          <button onClick="vslide('next', 'none'); bev('water'); slidesettings()">Water: The simple choice to wash away
             drowsiness.</button>
         </div>
       </div>
