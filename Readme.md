@@ -7,6 +7,7 @@ music and creative storytelling for those that stumble upon this. Feel free to p
 
 (note)
 You can also visit http://studymonke.x10.mx/. Although it only works on computers right now. 
+also...maybe don't press tab throughout the thing :)(its a bug we know, but we didn't have enough time to debug)
 
 
 Thanks again!
