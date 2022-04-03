@@ -323,7 +323,6 @@
                 In the midst of dwelling over a rather difficult question on your problem set that has been keeping you a little frustrated and 
                 a little too deep in thought, you heard your phone buzz, and [friend_name] is asking where you are, and what you’re doing.
               </div>
-              
             </div>
 
             <!-- Animation 7 -->
@@ -351,7 +350,7 @@
               });
             </script>
 
-            <div>
+            <div id="buttons7">
               <button onClick="vslide('next', 'pro'); friend(true)">“im at <span id="loc1"></span> and super bored lets do smth”</button>
               <button onClick="vslide('next', 'dist'); friend(true)">“wanna study w me at <span id="loc2"></span> might be here late tho”</button>
               <button onClick="vslide('next', 'calm'); friend(false)">“Im at <span id="loc3"></span> but really busy, wanna do tomorrow instead?”</button>
@@ -376,22 +375,16 @@
               </div>
             </div>
 
-            <!-- Animation 6 -->
+            <!-- Animation 8 -->
             <script>
-              $("page six").ready(function(){
-                $("#buttons5").click(function(){
-                  $("#six1").hide();  
-                  $("#six2").hide();  
-                  $("#six3").hide(); 
-                  $("#six4").hide();  
-                  $("#six5").hide();  
-                  $("#six1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                    $("#six2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#six3").fadeIn(2000).fadeOut(2000, function(){
-                        $("#six4").fadeIn(2000).fadeOut(2000, function(){
-                          $("#six5").fadeIn(2000)
-                       });
-                      });
+              $("page eight").ready(function(){
+                $("#buttons7").click(function(){
+                  $("#eight1").hide();  
+                  $("#eight2").hide();  
+                  $("#eight3").hide(); 
+                  $("#eight1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#eight2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#eight3").fadeIn(2000)
                     });
                   });
                 });
