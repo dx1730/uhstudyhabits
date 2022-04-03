@@ -11,19 +11,35 @@
 <body>
     <div class="container">
         <div class="pages">
-          <div>
-            <form>
-              <label for="friend_name">The name of a close friend:</label><br>
-              <input type="text" id="friend_name" name="friend_name"><br>
-              <label for="book">The title of a book you like:</label><br>
-              <input type="text" id="book" name="book">
-              <label for="author">The author of said book:</label><br>
-              <input type="text" id="author" name="author">
-            </form> 
-          </div>      
+          <div class = "page zero">
+            <div class = "panel1">
+              <div class = "innerpanel" id = zero1>
+                <div class = "input">
+                  <form id = "p0input">
+                    The name of a close friend: <br>
+                    <input type = "text" id = "friend_name"><br>
+                    A book you enjoy:<br>
+                    <input type = "text" id = "book"><br>
+                    Author of said book:<br>
+                    <input type = "text" id = "author"><br>
+                    <input type = "submit" value = "Submit" />
+                  </form> 
+                </div>   
+              </div>
+              <div class = "innerpanel" id = zero2>
+                <button onClick="vslide('next', 'none')">New Game</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class = "page t0"></div>
+
           <!-- STORY PAGE 1 -->
           <div class="page one">        
             <div class="panel2">
+              <div class = "innerpanel" id="two2"> 
+                <span id="friend_name"></span>
+              </div>
               <div class = "innerpanel" id="one1""> Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. 
                 Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, 
                 the brick and concrete sheltering you from the frigid air outside.
@@ -148,9 +164,6 @@
               choice and freedom. <br> <br>
               Not that you’ll spend it doing much of anything meaningful, of course. 
             </div>
-<<<<<<< HEAD
-            <div>
-=======
 
             <!-- Animation 4 -->
             <script>
@@ -169,7 +182,6 @@
             </script>
 
             <div id = "buttons4">
->>>>>>> bbd46c871b94ab0c350289959ec5802e76dad635
               <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as well.” </button>
               <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My friend should also be free right now, let me give them a call.”</button>
               <button onCLick="vslide('next', 'calm')">“Maybe I’ll go back home and take a quick break, or even fold my laundry.”</button>
@@ -187,7 +199,6 @@
                 Lecture crawls along as you count the seconds away. 
               </div>
               <div class = "innerpanel" id="five2"> 
-                Lecture crawls along as you count the seconds away. 
                 Yet as you walk out of the lecture hall you realize that time slipped by faster than you expect, reflected by the wispy clouds that 
                 have made their way into the sky, and the vague feeling of hunger in your stomach. 
               </div>

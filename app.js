@@ -7,6 +7,10 @@ var ind = 0;
 var dist = 0;
 var calm = 0;
 
+var friend_name;
+var author;
+var book;
+
 vslide = (direction, res) => {
     if (res == 'pro') {
         pro++;
@@ -34,6 +38,16 @@ hslide = (direction) => {
         pages => (pages.style.transform = `translateX(${translate}%)`)
     );
 }
+
+//function for getting variables from the first page form
+function loadstory() {
+    document.getElementById("p0input").onsubmit = function () {
+        friend_name = document.getElementById("friend_name");
+        book = document.getElementById("book");
+        author = document.getElementById("author");
+    }
+}
+
 
 // Edit pg 2 on beverage
 function bev(drink) {
