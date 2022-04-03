@@ -7,9 +7,15 @@ var ind = 0;
 var dist = 0;
 var calm = 0;
 
-var friend_name;
-var author;
-var book;
+var test = "hello, world!";
+
+var $jqName = $('.name');
+var $jqValue = $('.jqValue');
+
+$jqName.on('input', function(event){
+  $jqValue.html($jqName.val());
+});
+
 
 vslide = (direction, res) => {
     if (res == 'pro') {
@@ -39,14 +45,6 @@ hslide = (direction) => {
     );
 }
 
-//function for getting variables from the first page form
-function loadstory() {
-    document.getElementById("p0input").onsubmit = function () {
-        friend_name = document.getElementById("friend_name");
-        book = document.getElementById("book");
-        author = document.getElementById("author");
-    }
-}
 
 
 // Edit pg 2 on beverage
