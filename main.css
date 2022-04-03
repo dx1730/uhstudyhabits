@@ -27,9 +27,11 @@ button:hover {
     height: 100vh;
     overflow: hidden;
 }
+
+/*Need to change pages width to n * 100, where n is number of total pages*/
 .pages {
     display: flex;
-    width: 400%;
+    width: 700%;
     box-sizing: border-box;
 }
 /* .vpages {
@@ -67,3 +69,13 @@ button:hover {
     background-color: limegreen;
 }
 
+/*Transitions*/
+.t1{
+    background: orangered;
+}
+.t2{
+    background: orangered;
+}
+.t3{
+    background: orangered;
+}
