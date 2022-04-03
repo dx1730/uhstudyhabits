@@ -66,10 +66,12 @@
               $("#one2").hide();
               $("#one3").hide();
               $("#buttons1").hide();
-              $("#one1").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                $("#one2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#one3").fadeIn(2000);
-                  $("#buttons1").delay(2000).fadeIn(2000);
+              $("#zero2").click(function(){
+                $("#one1").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#one2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                    $("#one3").fadeIn(2000);
+                    $("#buttons1").delay(2000).fadeIn(2000);
+                  });
                 });
               });
             });
