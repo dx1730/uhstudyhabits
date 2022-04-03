@@ -75,7 +75,7 @@ button:hover {
 
 .one{
     background-color: black;
-    background-image: url('art/page1frame.png');
+    background-image: url('art/framep1.png');
 
     background-position: center;
     background-repeat: no-repeat;
@@ -83,21 +83,21 @@ button:hover {
 }
 .two{
     background-color: black;
-    background-image: url('art/page2frame.png');
+    background-image: url('art/framep2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .three{
     background-color: black;
-    background-image: url('art/page3frame.png');
+    background-image: url('art/framep3.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .four{
     background-color: black;
-    background-image: url('art/page4frame.png');
+    background-image: url('art/framep4.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
