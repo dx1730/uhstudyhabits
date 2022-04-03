@@ -35,3 +35,12 @@ vslide = (direction) => {
     );
 }
 
+// Edit pg 2 on beverage
+function bev(drink) {
+    document.getElementById("bev").innerHTML = "The warmth you feel in your soul brings you comfort, and reminds you why you love " + drink + " so much.";
+}
+
+// test jump to new page
+// function test() {
+//     window.location.href="sample.html";
+// }

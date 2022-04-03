@@ -12,7 +12,6 @@
         <div class="pages">
           <div class="page one">
             <!-- <h1>PAGE 1</h1> -->
-
             <div class="panel1">
                 Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. 
                 Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, 
@@ -26,19 +25,18 @@
                 While you enjoy all of them, you only have one bottle. What will you have this morning?
             </div>
             <div>
-              <button onClick="hslide('next', 'none')">Coffee: a rich, hearty aroma that offers warmth in the frigid weather.</button>
-              <button onClick="hslide('next', 'none')">Tea: soothing and refreshing, with a hint of herbal freshness.</button>
-              <button onClick="hslide('next', 'none')">Orange juice: sweet, refreshing, and full of vitamin C to keep yourself healthy and happy.</button>
+              <button onClick="hslide('next', 'none'); bev('coffee')">Coffee: a rich, hearty aroma that offers warmth in the frigid weather.</button>
+              <button onClick="hslide('next', 'none'); bev('tea')">Tea: soothing and refreshing, with a hint of herbal freshness.</button>
+              <button onClick="hslide('next', 'none')">Orange Juice: sweet, refreshing, and full of vitamin C to keep yourself healthy and happy.</button>
               <button onClick="hslide('next', 'none')">Water: The simple choice to wash away drowsiness.</button>
             </div>
           </div>
-
           <div class="page two">
             <div class="panel1">
                 As simple as your college life may seem, you are looking forward to tackling the everyday 
                 challenges that may become the highlights, and mishaps, of your day. With your bottle full 
                 and your bag packed, you head out the front door, greeted by the cold, refreshing air. <br> <br>
-
+                <span id="bev"></span>
                 You find yourself reaching for your headphones. “Maybe I should listen to something.”
             </div>
             <div>
@@ -50,7 +48,7 @@
           </div>
 
           <div class="page three">
-            <div class="panel 1">
+            <div class="panel1">
               The lecture hall is not precisely where you want to be right now, but work must be done and in due time, 
               your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all of 
               lecture unfocused, but not so close that you can hear the instructor’s breathing. You grasp onto the fragments
@@ -66,13 +64,14 @@
               <button onClick="hslide('next', 'pro')">“It’s okay. I’ll pay more attention without anything in front of me to distract, and the lecture notes will be online later today anyways.” Truly the minimalist approach..</button>
             </div>
           </div>
+
           <div class="page four">
             <h1>PAGE 4</h1>
             <div>
-              <button onClick="hslide('prev')">Previous</button>
+              <button onClick="hslide('prev'); test()">Previous</button>
             </div>
           </div>
-
+        </div>
       </div>
 <script src="app.js"></script>
 </body>
