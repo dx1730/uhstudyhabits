@@ -24,6 +24,7 @@
       <audio id="leson" src="Maple.mp3" autoplay="true" hidden="true" loop="true"></audio>
         <div class="pages">
           <div class = "page zero">
+            <h1> it's time to study at uchicago!</h1>
             <div class = "panel1">
               <div class = "innerpanel" id = zero1>
                 <div class = "input">
@@ -33,10 +34,9 @@
                   <input type = "text" id = "book_name"><br>
                   Author of said book:<br>
                   <input type = "text" id = "author_name"><br>
-                  <button type = "button" onClick = "get_vars()" id = "rmr">remember...</button>
+                  <button type = "button" onClick = "get_vars(); show_next();" id = "rmr">remember...</button>
                   <span>Press [~] to play/pause</span>
                 </div>
-
                 <script> 
                   $("page zero").ready(function () {
                     $("#rmr").click(function(){
@@ -56,13 +56,14 @@
       <div class="page one">
         <div class="panel2">
           <div class="innerpanel" id="one1">
-            Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, the brick and concrete sheltering you from the frigid air outside.
+            Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home.
+            Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, and the frigid air outside beckons to you, locked outside by walls of brick and concrete.
           </div>
           
-          <div class = " innerpanel" id="one2"> The fragmented memories of last night’s dream fade out of your mind as
-            concentration and focus take their place. A shame, it was a good dream, but even though the details are lost, a vague sense of
-            happiness remains. “At least it was a happy dream,” you think to yourself as you get ready
-            for class. You’ll even have time to indulge in breakfast today.
+          <div class = " innerpanel" id="one2"> 
+            The fragmented memories of last night’s dream fade out of your mind as concentration and focus take their place. 
+            A shame, it was a good dream, but even though the details are lost, a vague sense of happiness remains. 
+            “At least it was a happy dream,” you think to yourself as you get ready for class. You’ll even have time to indulge in breakfast today. 
           </div>
 
           <div class = "innerpanel" id="one3"> While you enjoy all of them, you only have one bottle. What will you have this morning?
@@ -93,7 +94,7 @@
             frigid weather.</button>
           <button onClick="vslide('next', 'none'); bev('tea'); slidesettings()">Tea: soothing and refreshing, with a hint of herbal
             freshness.</button>
-          <button onClick="vslide('next', 'none'); bev('orange juice'); slidesettings()">Orange Juice: sweet, refreshing, and full of
+          <button onClick="vslide('next', 'none'); bev('orange juice'); slidesettings()">Orange juice: sweet, refreshing, and full of
             vitamin C to keep yourself healthy and happy.</button>
           <button onClick="vslide('next', 'none'); bev('water'); slidesettings()">Water: The simple choice to wash away
             drowsiness.</button>
@@ -107,10 +108,8 @@
 
       <div class="page two">
         <div class="panel2">
-          <div class="innerpanel" id="two1"> As simple as your college life may seem, you are looking forward to
-            tackling the everyday
-            challenges that may become the highlights, and mishaps, of your day. With your bottle full
-            and your bag packed, you head out the front door, greeted by the cold, refreshing air.
+          <div class="innerpanel" id="two1"> The sunlight proves a bit of comfort against the cold, biting at the edges of your ears and the tips of your fingers.
+            With your bottle full and your bag packed, you head out the front door, greeted by the cold, refreshing air.
           </div>
           <div class="innerpanel" id="two2">
             <span id="bev"></span>
@@ -156,14 +155,14 @@
         <div class="panel2">
           <div class="innerpanel" id="three1"> The lecture hall is not precisely where you want to be right now, but
             work must be done and in due time,
-            your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all
+            your diligence will surely pay off. You claim the seat you often sit in, not so far that you’ll spend all
             of
             lecture unfocused, but not so close that you can hear the instructor’s breathing.
           </div>
-          <div class="innerpanel" id="three2"> You grasp onto the fragments of conversation dancing around the room,
-            find mild entertainment in catching brief whiffs of campus happenings
-            and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into
-            one voice.
+          <div class="innerpanel" id="three2"> ou grasp onto the fragments of conversation dancing around the room, 
+            find mild entertainment in catching brief whiffs of campus happenings,
+            listen to everyone and everything as all individuals merge into one singular voice. 
+
           </div>
 
           <div class="innerpanel" id="three3">
@@ -173,14 +172,13 @@
         </div>
 
         <div class="button-contain" id="buttons3">
-          <button onClick="vslide('next', 'ind')">“My iPad has been one of the most useful things I’ve ever owned.” A
-            few taps are all you need to get ready for class.</button>
-          <button onClick="vslide('next', 'calm')">“Does my laptop have charge? Ah, yes it does.” Your hands are already
-            dancing across the keyboard even before the lecture has started.</button>
-          <button onClick="vslide('next', 'dist')">“I’m running out of paper in this notebook, and my highlighters are
-            almost done too.” Note-taking is an artform, and you are the artist. Gel pens and highlighters on
+          <button onClick="vslide('next', 'ind')">"My iPad is great. A
+            few taps are all it takes to get ready for class."</button>
+          <button onClick="vslide('next', 'calm')">Your hands are already
+            dancing across the keyboard of your laptop even before the lecture has started.</button>
+          <button onClick="vslide('next', 'dist')">Note-taking is an artform, and you are the artist. Gel pens and highlighters on
             college-rule are the medium.</button>
-          <button onClick="vslide('next', 'pro')">“It’s okay. I’ll pay more attention without anything in front of me to
+          <button onClick="vslide('next', 'pro')">“I’ll pay more attention without anything in front of me to
             distract, and the lecture notes will be online later today anyways.” Truly the minimalist
             approach..</button>
         </div>
@@ -243,7 +241,7 @@
         </div>
 
         <div class="button-contain" id="buttons4_next">
-          <button onClick="vslide('next', 'na')">“next...”</button>
+          <button onClick="vslide('next', 'na')">“next”</button>
         </div>
 
       </div>
@@ -283,7 +281,7 @@
       <div class="page five">
         <div class="panel2">
           <div class="innerpanel" id="five1">
-            Lecture crawls along as you count the seconds away.
+            You've been sitting around bored, lecture crawling along as you count the seconds away.
           </div>
           <div class="innerpanel" id="five2">
             Yet as you walk out of the lecture hall you realize that time slipped by faster than you expect, reflected
@@ -338,9 +336,7 @@
           <div class="innerpanel" id="six2">
             The soft golden glow, the soothing fabric of your scarf, the long, dark shadows
             cast by campus oaks, the coldness of the crisp spring air, the raw feeling of
-            simply existing, they surround you, enveloping not just you, but also the girl
-            with the red mittens walking a few paces behind, the two instructors with coffees
-            in hand approaching from your left, the young man briskly cycling past.
+            simply existing, they surround you, envelop you.
           </div>
 
           <div class="innerpanel" id="six3">
@@ -534,7 +530,7 @@
 
         <div class="button-contain" id="buttons9">
           <button onClick="vslide('next', 'ind')">“I’ll read a book, perhaps a couple more chapters of
-            [book_name]”</button>
+            <span id = print_book></span>.”</button>
           <button onClick="vslide('next', 'calm')">“I’ll listen to music until I fall asleep, and give myself a chance
             to really relax.”</button>
           <button onClick="vslide('next', 'pro')">“It’s been a while since I last called my parents and caught up with
