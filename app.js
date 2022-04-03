@@ -115,9 +115,18 @@ function friend(bool) {
 }
 
 // test jump to new page
-// function test() {
-//     window.location.href="sample.html";
-// }
+function results() {
+    var max = Math.max(pro, ind, dist, calm);
+    if (max == pro){
+        window.location.href="/art/framep1.png";
+    } else if (max == ind) {
+        window.location.href="/art/framep1.png";
+    } else if (max == dist) {
+        window.location.href="/art/framep1.png";
+    } else {
+        window.location.href="/art/framep1.png";
+    }
+}
 
 function play() {
     var audio = document.getElementById("audio");
