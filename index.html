@@ -292,7 +292,11 @@
                     $("#six2").fadeIn(2000).fadeOut(2000, function(){
                       $("#six3").fadeIn(2000).fadeOut(2000, function(){
                         $("#six4").fadeIn(2000).fadeOut(2000, function(){
+<<<<<<< HEAD
                           $("#six5").fadeIn(2000).fadeOut(2000)
+=======
+                          $("#six5").fadeIn(2000);
+>>>>>>> be7ad8eec3c6cf51d1580affc77dd763a5edf468
                        });
                       });
                     });
@@ -301,10 +305,10 @@
               });
             </script>
 
-            <div>
-              <button onClick="vslide('next', 'dist'); loc('A')">“I’ll head to the A level of the Reg and do some work there.”</button>
-              <button onClick="vslide('next', 'calm'); loc('B')">“Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</button>
-              <button onClick="vslide('next', 'pro'); loc('C')">“Let me head to a cafe, a little white noise really puts me in focus state.”</button>
+            <div id="buttons6">
+              <button onClick="vslide('next', 'pro'); loc('A')">“I’ll head to the A level of the Reg and do some work there.” </button>
+              <button onClick="vslide('next', 'dist'); loc('B')">““Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</button>
+              <button onClick="vslide('next', 'calm'); loc('C')">“Let me head to a cafe, a little white noise really puts me in focus state.”</button>
               <button onClick="vslide('next', 'ind'); loc('D')">“I’ll head home to the comfort of my room and avoid too many distractions, that’s the best way to be productive.”</button>
             </div>
           </div>
@@ -312,13 +316,103 @@
           <!-- STORY TRANSITION 6-->
           <div class="page t6"></div>
 
-          <div class="page seven">
-            <div class="panel1">
-              … Time passes … <br>
-              … you eat dinner with a few friends … <br>
-              … you feel happy to spend time with them … <br>
-              … you promise to get dinner again tomorrow … <br>
-              … you go back to studying … <br> <br>
+           <!-- STORY PAGE 7 -->
+           <div class="page seven">
+            <div class="panel2">
+              <div class = "innerpanel" id="seven1"> 
+                … Time passes …  
+              </div>
+              <div class = "innerpanel" id="seven2"> 
+                … you eat dinner with a few friends …
+              </div>
+              <div class = "innerpanel" id="seven3"> 
+                … you feel happy to spend time with them …
+              </div>
+              <div class = "innerpanel" id="seven4"> 
+                … you promise to get dinner again tomorrow …
+              </div>
+              <div class = "innerpanel" id="seven5"> 
+                … you go back to studying …
+              </div>
+              <div class = "innerpanel" id="seven6"> 
+                In the midst of dwelling over a rather difficult question on your problem set that has been keeping you a little frustrated and 
+                a little too deep in thought, you heard your phone buzz, and [friend_name] is asking where you are, and what you’re doing.
+              </div>
+            </div>
+
+            <!-- Animation 7 -->
+            <script>
+              $("page seven").ready(function(){
+                $("#buttons6").click(function(){
+                  $("#seven1").hide();  
+                  $("#seven2").hide();  
+                  $("#seven3").hide(); 
+                  $("#seven4").hide();  
+                  $("#seven5").hide();  
+                  $("#seven6").hide();  
+                  $("#seven1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#seven2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#seven3").fadeIn(2000).fadeOut(2000, function(){
+                        $("#seven4").fadeIn(2000).fadeOut(2000, function(){
+                          $("#seven5").fadeIn(2000).fadeOut(2000, function(){
+                            $("#seven6").fadeIn(2000);
+                          });
+                       });
+                      });
+                    });
+                  });
+                });
+              });
+            </script>
+
+            <div id="buttons7">
+              <button onClick="vslide('next', 'pro'); friend(true)">“im at <span id="loc1"></span> and super bored lets do smth”</button>
+              <button onClick="vslide('next', 'dist'); friend(true)">“wanna study w me at <span id="loc2"></span> might be here late tho”</button>
+              <button onClick="vslide('next', 'calm'); friend(false)">“Im at <span id="loc3"></span> but really busy, wanna do tomorrow instead?”</button>
+              <button onClick="vslide('next', 'ind'); friend(false)">… (don’t respond)</button>
+            </div>
+          </div>
+
+          <!-- STORY TRANSITION 6-->
+          <div class="page t6"></div>
+
+          <div class="page eight">
+            <div class="panel2">
+              <div class="innerpanel" id="eight1">
+                <span id="p8"></span> 
+              </div>
+              <div class="innerpanel" id="eight2">
+                You wrap up work for the day, feeling success in your small accomplishments. Through the window you see that the 
+                setting sun has since been replaced by the faint glow of a crescent moon on this beautiful cloudless night. 
+              </div>
+              <div class="innerpanel" id="eight3">
+                A quick glance at the clock tells you that you’ve worked until
+              </div>
+            </div>
+
+            <!-- Animation 8 -->
+            <script>
+              $("page eight").ready(function(){
+                $("#buttons7").click(function(){
+                  $("#eight1").hide();  
+                  $("#eight2").hide();  
+                  $("#eight3").hide(); 
+                  $("#eight1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#eight2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#eight3").fadeIn(2000)
+                    });
+                  });
+                });
+              });
+            </script>
+
+            <div>
+              <button onClick="vslide('next', 'pro')">8pm</button>
+              <button onClick="vslide('next', 'dist')">a tad past ten</button>
+              <button onClick="vslide('next', 'calm')">midnight</button>
+              <button onClick="vslide('next', 'ind')">the early hours of morning</button>
+            </div>
+          </div>
 
               In the midst of dwelling over a rather difficult question on your problem set that has been 
               keeping you a little frustrated and a little too deep in thought, you heard your phone buzz, 
