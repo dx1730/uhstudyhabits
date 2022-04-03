@@ -406,7 +406,7 @@
               });
             </script>
 
-            <div>
+            <div id="buttons8">
               <button onClick="vslide('next', 'pro')">8pm</button>
               <button onClick="vslide('next', 'dist')">a tad past ten</button>
               <button onClick="vslide('next', 'calm')">midnight</button>
@@ -414,6 +414,7 @@
             </div>
           </div>
 
+<<<<<<< HEAD
               In the midst of dwelling over a rather difficult question on your problem set that has been 
               keeping you a little frustrated and a little too deep in thought, you heard your phone buzz, 
               and [friend_name] is asking where you are, and what you’re doing.
@@ -428,6 +429,74 @@
 
           <!-- STORY TRANSITION 7-->
           <div class="page t7"></div>
+=======
+          <!-- STORY TRANSITION 8-->
+          <div class="page t8"></div>
+
+          <div class="page nine">
+            <div class="panel2">
+              <div class="innerpanel" id="nine1">
+                Your bed marks the conclusion of another long day. 
+              </div>
+              <div class="innerpanel" id="nine2">
+                It is a haven for the weary soul to regain strength and rest today, 
+              in preparation for the journey of tomorrow. 
+              </div>
+              <div class="innerpanel" id="nine3">
+                It is a portal of sorts, that takes you forward, slowly but surely, 
+                into the days and weeks and months that await you. 
+              </div>
+              <div class="innerpanel" id="nine4">
+                How do you prepare yourself for such a journey?
+              </div>
+            </div>
+
+            <!-- Animation 9 -->
+            <script>
+              $("page nine").ready(function(){
+                $("#buttons8").click(function(){
+                  $("#nine1").hide();  
+                  $("#nine2").hide();  
+                  $("#nine3").hide(); 
+                  $("#nine4").hide(); 
+                  $("#nine1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#nine2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#nine3").fadeIn(2000).fadeOut(2000, function(){
+                        $("#nine4").fadeIn(2000);
+                      });
+                    });
+                  });
+                });
+              });
+            </script>
+
+            <div id="buttons9">
+              <button onClick="vslide('next', 'ind')">“I’ll read a book, perhaps a couple more chapters of [book_name]”</button>
+              <button onClick="vslide('next', 'calm')">“I’ll listen to music until I fall asleep, and give myself a chance to really relax.”</button>
+              <button onClick="vslide('next', 'pro')">“It’s been a while since I last called my parents and caught up with them, and there’s a lot  that I want to tell them.”</button>
+              <button onClick="vslide('next', 'dist')">You see nothing more than the blissful peace that is your bed, and cannot wait to go straight to bed.</button>
+            </div>
+          </div>
+
+          <!-- STORY TRANSITION 8-->
+          <div class="page t9"></div>
+
+          <div class="page ten">
+            <div class="panel1">
+              The line between dream and reality blurs as the clutches of sleep slowly tighten their grasp. 
+              “It’s been a good day,” you think to yourself, or perhaps say in your dream, you are not quite sure. 
+              
+              You see the smiles of your classmates, hear the laughs of your friends, feel the warmth of the sun yet the cold of 
+              the air. 
+              
+              <span id="p10"></span>
+            </div>
+
+            <div>
+              <button onClick="results()">Continue to results...</button>
+            </div>
+          </div>
+>>>>>>> 8f0e58e006daca379895b57ccf03d8ba4f88f03c
 
         </div>
       </div>
