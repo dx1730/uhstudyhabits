@@ -60,7 +60,25 @@ function loc(choice) {
     document.getElementById("loc1").innerHTML = msg;
     document.getElementById("loc2").innerHTML = msg;
     document.getElementById("loc3").innerHTML = msg;
- }
+}
+
+// friend functionality
+function friend(bool) {
+    var msg = "";
+    if (bool == true) {
+        msg = "Time spent alongside a close friend is time well spent. Your lively conversation might have \
+        earned a couple dirty looks and sideways glances but that is no reason for you to be concerned with \
+        the trivial opinions of passing strangers. And as you and [friend_name] slip back into more academic \
+        pursuits, you are reminded of how easy it is to take for granted the silent presence of a close friend.";
+    } else {
+        msg = "As much as you enjoy spending time with friends, work has to take first priority sometimes. \
+        It’s times like these that you value the most, surrounded by your thoughts and your sensations, \
+        pursuing results produced by your own hard work, engrossed in all that is wholly yours. In this \
+        present moment you feel in control, no, you are in control. An odd truth to realize while staring \
+        at your math homework, surely, yet the truth resonates with you deeply.";
+    }
+    document.getElementById("p8").innerHTML = msg;
+}
 
 // test jump to new page
 // function test() {

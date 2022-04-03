@@ -90,14 +90,14 @@ button:hover {
 
 .one{
     background-color: var(--p1-color);
-    background-image: url('../art/page1.png');
+    background-image: url('/art/page1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .two{
     background-color: var(--p2-color);
-    background-image: url('../art/page2.png');
+    background-image: url('/art/page2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
