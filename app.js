@@ -40,6 +40,24 @@ function bev(drink) {
     document.getElementById("bev").innerHTML = "The warmth you feel in your soul brings you comfort, and reminds you why you love " + drink + " so much.";
 }
 
+// Location functionality
+function loc(choice) {
+    var l = "";
+    if (choice == "A") {
+        l = "the A level";
+    } else if (choice == "B") {
+        l = "crerar";
+    } else if (choice == "C") {
+        l = "harper";
+    } else {
+        l = "home";
+    }
+    var msg = " " + l + " ";
+    document.getElementById("loc1").innerHTML = msg;
+    document.getElementById("loc2").innerHTML = msg;
+    document.getElementById("loc3").innerHTML = msg;
+ }
+
 // test jump to new page
 // function test() {
 //     window.location.href="sample.html";
