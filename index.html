@@ -23,8 +23,9 @@
                   <input type = "text" id = "book"><br>
                   Author of said book:<br>
                   <input type = "text" id = "author"><br>
-                  <button type = "button" onclick = "get_vars()">remember...</button>
+                  <button type = "button" onclick = "get_vars()" id = "rmr">remember...</button>
                 </div>
+
                 <script> 
                   function get_vars() {
                       var x = document.getElementById("friend_name").value;
@@ -34,7 +35,12 @@
                       var z = document.getElementById("author").value;
                       document.getElementById("print_author").innerHTML = z;    
                   }
-                  </script>
+                  $("page zero").ready(function () {
+                    $("#rmr").click(function(){
+                      $("#rmr").fadeOut(1000);
+                    });
+                  });
+                </script>
                   
               </div>
               <div class = "innerpanel" id = zero2>
@@ -61,24 +67,20 @@
           <div class = " innerpanel" id="one3"> While you enjoy all of them, you only have one bottle. What will you have this morning?
           </div>
         
-          
-          
           <!-- Animation 1 -->
           <script>
-            
-
             $("page one").ready(function () {
               $("#one1").hide();
               $("#one2").hide();
               $("#one3").hide();
+              $("#buttons1").hide();
               $("#one1").fadeIn(2000).delay(2000).fadeOut(2000, function () {
                 $("#one2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
                   $("#one3").fadeIn(2000);
+                  $("#buttons1").delay(2000).fadeIn(2000);
                 });
               });
             });
-          
-
           </script>
 
       </div>
@@ -163,22 +165,6 @@
             Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into
             your bag.
           </div>
-
-          <!-- Animation 3 -->
-          <script>
-            $("page three").ready(function () {
-              $("#buttons2").click(function () {
-                $("#three1").hide();
-                $("#three2").hide();
-                $("#three3").hide();
-                $("#three1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                  $("#three2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
-                    $("#three3").fadeIn(2000);
-                  });
-                });
-              });
-            });
-          </script>
         </div>
 
         <div class="button-contain" id="buttons3">
@@ -193,6 +179,24 @@
             distract, and the lecture notes will be online later today anyways.” Truly the minimalist
             approach..</button>
         </div>
+
+        <!-- Animation 3 -->
+        <script>
+          $("page three").ready(function () {
+            $("#buttons2").click(function () {
+              $("#three1").hide();
+              $("#three2").hide();
+              $("#three3").hide();
+              $("#buttons3").hide()
+              $("#three1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#three2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#three3").fadeIn(2000);
+                  $("#buttons3").delay(2000).fadeIn(2000);
+                });
+              });
+            });
+          });
+        </script>
 
       </div>
 
