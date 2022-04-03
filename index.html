@@ -22,10 +22,6 @@
   -->
     <div class="container">
       <audio id="leson" src="Maple.mp3" autoplay="true" hidden="true" loop="true"></audio>
-      <script>
-        
-        window.addEventListener("keydown", onKeyDown, false);
-        </script>
         <div class="pages">
           <div class = "page zero">
             <div class = "panel1">
@@ -33,12 +29,12 @@
                 <div class = "input">
                   The name of a close friend:<br>
                   <input type = "text" id = "friend_name"/><br>
-                  
                   A book you enjoy:<br>
                   <input type = "text" id = "book_name"><br>
                   Author of said book:<br>
                   <input type = "text" id = "author_name"><br>
                   <button type = "button" onClick = "get_vars()" id = "rmr">remember...</button>
+                  <span>Press [space] to play/pause</span>
                 </div>
 
                 <script> 
