@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Georgia&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+}
+:root {
+    --accent-color: #c59cff;
+    --accent-color2: #D6CA98;
+    --bg-color: rgba(31, 3, 58, 0.7);
+    --bg-color-opaque: rgba(31, 3, 58, 1);
+    --p0-color: rgba(31, 3, 58, 1);
+    --p1-color: #91928f;
+    --p2-color: #6d775d;
+    --p3-color: #a08971;
+    --p4-color: #72828a;
+    --p5-color: #29516d;
+    --p6-color: #9a9e71;
+    --p7-color: #aa876a;
+    --p8-color: #572e45;
+    --p9-color: #151412;
+    --p10-color: #144662;
+}
+
+body {
+    /* background-color: var(--bg-color-opaque); */
+    background-image: linear-gradient(to right, var(--p5-color), var(--p8-color));
+}
+
+.image {
+    margin-top : 7%;
+    margin-left : 5%;
+    height: 90%;
+}
+.center {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    margin-right: auto;
+    height: 100%;
+}
+
+.credits {
+    position: relative;
+    top: 125px;
+    margin: 5%;
+    background-color: transparent;
+    width: 40%;
+    padding: 1%;
+    line-height: 1.5;
+    text-align: left;
+    color: white;
+    position: center;
+}

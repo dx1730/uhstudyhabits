@@ -167,6 +167,13 @@ audiopanel[type=text] {
     transform: translateY(-50%);
 }
 
+/* .foreground {
+    position: absolute;
+    left: 400px;
+    height: 100%;
+    z-index: 1;
+} */
+
 .zero{
     background-color: var(--p0-color);
     background-position: center;
