@@ -33,8 +33,13 @@
                   <input type = "text" id = "book_name"><br>
                   Author of said book:<br>
                   <input type = "text" id = "author_name"><br>
+<<<<<<< HEAD
                   <button type = "button" onClick = "get_vars()" id = "rmr">remember...</button>
                   <span>Press [~] to play/pause</span>
+=======
+                  <button type = "button" onClick = "get_vars(); show_next();" id = "rmr">remember...</button>
+                  <span>Press [space] to play/pause</span> 
+>>>>>>> 05c01dcf661efa2a9a2a3b8c69dcf4b719cbb675
                 </div>
 
                 <script> 
@@ -44,11 +49,9 @@
                     });
                   });
                 </script>
-                  
               </div>
-              <div class = "innerpanel" id = zero2>
-                <button onClick="vslide('next', 'none'); slidesettings()">next...</button>
-              </div>
+
+              <div id="zero2" class="innerpanel"></div>
             </div>
           </div>
           
@@ -67,7 +70,7 @@
             for class. You’ll even have time to indulge in breakfast today.
           </div>
 
-          <div class = " innerpanel" id="one3"> While you enjoy all of them, you only have one bottle. What will you have this morning?
+          <div class = "innerpanel" id="one3"> While you enjoy all of them, you only have one bottle. What will you have this morning?
           </div>
         
           <!-- Animation 1 -->
@@ -81,7 +84,7 @@
                 $("#one1").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                   $("#one2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                     $("#one3").fadeIn(1000);
-                    $("#buttons1").delay(1000).fadeIn(1000);
+                    $("#buttons1").delay(1000).fadeIn(500);
                   });
                 });
               });
@@ -128,9 +131,11 @@
               $("#two1").hide();
               $("#two2").hide();
               $("#two3").hide();
+              $("#buttons2").hide();
               $("#two1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
                 $("#two2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                   $("#two3").fadeIn(1000);
+                  $("#buttons2").delay(1000).fadeIn(500);
                 });
               });
             });
@@ -196,7 +201,7 @@
               $("#three1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
                 $("#three2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                   $("#three3").fadeIn(1000);
-                  $("#buttons3").delay(1000).fadeIn(1000);
+                  $("#buttons3").delay(1000).fadeIn(500);
                 });
               });
             });
@@ -258,10 +263,11 @@
             $("#buttons4").hide();
             $("#buttons4_next").hide();
             $("#story4_2").hide();
+            
             $("#four1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
               $("#four2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                 $("#four3").fadeIn(1000);
-                $("#buttons4").delay(1000).fadeIn(1000);
+                $("#buttons4").delay(1000).fadeIn(500);
               });
             });
           });
@@ -269,7 +275,7 @@
           $("#buttons4").click(function (){
             $("#buttons4").fadeOut(500, function(){
               $("#story4_2").fadeIn(500);
-              $("#buttons4_next").delay(500).fadeIn(500);
+              $("#buttons4_next").delay(3000).fadeIn(500);
             });
           });
         });
@@ -294,22 +300,6 @@
           </div>
         </div>
 
-        <!-- Animation 5 -->
-        <script>
-          $("page five").ready(function () {
-            $("#buttons4_next").click(function () {
-              $("#five1").hide();
-              $("#five2").hide();
-              $("#five3").hide();
-              $("#five1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#five2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#five3").fadeIn(1000);
-                });
-              });
-            });
-          });
-        </script>
-
         <div class="button-contain" id="buttons5">
           <button onClick="vslide('next', 'none')">“The dining hall is an easy choice.”<span id="p5a"></span></button>
           <button onClick="vslide('next', 'none')">“Let me go make something at home!”<span id="p5b"></span></button>
@@ -317,6 +307,25 @@
           <button onClick="vslide('next', 'none')">“I’ll check out Reynolds Club, it’s been a while since
             I’ve spent Maroon dollars and can probably spare a few.”<span id="p5d"></span></button>
         </div>
+
+        <!-- Animation 5 -->
+        <script>
+          $("page five").ready(function () {
+            $("#buttons4_next").click(function () {
+              $("#five1").hide();
+              $("#five2").hide();
+              $("#five3").hide();
+              $("#five3").hide();
+              $("#buttons5").hide();
+              $("#five1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#five2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#five3").fadeIn(1000);
+                  $("#buttons5").delay(1000).fadeIn(500);
+                });
+              });
+            });
+          });
+        </script>
       </div>
 
       <!-- STORY TRANSITION 5-->
@@ -358,27 +367,6 @@
           </div>
         </div>
 
-        <!-- Animation 6 -->
-        <script>
-          $("page six").ready(function () {
-            $("#buttons5").click(function () {
-              $("#six1").hide();
-              $("#six2").hide();
-              $("#six3").hide();
-              $("#six4").hide();
-              $("#six5").hide();
-              $("#six1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#six2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#six3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                    $("#six4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                      $("#six5").fadeIn(1000);
-                    });
-                  });
-                });
-              });
-            });
-          });
-        </script>
 
         <div class="button-contain" id="buttons6">
           <button onClick="vslide('next', 'pro'); loc('A')">“I’ll head to the A level of the Reg and do some work
@@ -391,6 +379,30 @@
             distractions, that’s the best way to be productive.”</button>
         </div>
       </div>
+
+      <!-- Animation 6 -->
+      <script>
+        $("page six").ready(function () {
+          $("#buttons5").click(function () {
+            $("#six1").hide();
+            $("#six2").hide();
+            $("#six3").hide();
+            $("#six4").hide();
+            $("#six5").hide();
+            $("#buttons6").hide();
+            $("#six1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#six2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#six3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#six4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                    $("#six5").fadeIn(1000);
+                    $("#buttons6").delay(1000).fadeIn(500);
+                  });
+                });
+              });
+            });
+          });
+        });
+      </script>
 
       <!-- STORY TRANSITION 6-->
       <div class="page t6"></div>
@@ -421,31 +433,6 @@
           </div>
         </div>
 
-        <!-- Animation 7 -->
-        <script>
-          $("page seven").ready(function () {
-            $("#buttons6").click(function () {
-              $("#seven1").hide();
-              $("#seven2").hide();
-              $("#seven3").hide();
-              $("#seven4").hide();
-              $("#seven5").hide();
-              $("#seven6").hide();
-              $("#seven1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#seven2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#seven3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                    $("#seven4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                      $("#seven5").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                        $("#seven6").fadeIn(1000);
-                      });
-                    });
-                  });
-                });
-              });
-            });
-          });
-        </script>
-
         <div class="button-contain" id="buttons7">
           <button onClick="vslide('next', 'pro'); friend(true)">“I'm at <span id="loc1"></span> and super bored, lets do
             something.”</button>
@@ -457,8 +444,35 @@
         </div>
       </div>
 
-      <!-- STORY TRANSITION 6-->
-      <div class="page t6"></div>
+       <!-- Animation 7 -->
+       <script>
+        $("page seven").ready(function () {
+          $("#buttons6").click(function () {
+            $("#seven1").hide();
+            $("#seven2").hide();
+            $("#seven3").hide();
+            $("#seven4").hide();
+            $("#seven5").hide();
+            $("#seven6").hide();
+            $("#buttons7").hide();
+            $("#seven1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#seven2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#seven3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#seven4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                    $("#seven5").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                      $("#seven6").fadeIn(1000);
+                      $("#buttons7").delay(1000).fadeIn(500);
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      </script>
+
+      <!-- STORY TRANSITION 7-->
+      <div class="page t7"></div>
 
       <div class="page eight">
         <div class="panel2">
@@ -475,22 +489,6 @@
           </div>
         </div>
 
-        <!-- Animation 8 -->
-        <script>
-          $("page eight").ready(function () {
-            $("#buttons7").click(function () {
-              $("#eight1").hide();
-              $("#eight2").hide();
-              $("#eight3").hide();
-              $("#eight1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#eight2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#eight3").fadeIn(1000)
-                });
-              });
-            });
-          });
-        </script>
-
         <div class="button-contain" id="buttons8">
           <button onClick="vslide('next', 'pro')">8pm</button>
           <button onClick="vslide('next', 'dist')">a tad past ten</button>
@@ -498,6 +496,24 @@
           <button onClick="vslide('next', 'ind')">the early hours of morning</button>
         </div>
       </div>
+
+      <!-- Animation 8 -->
+      <script>
+        $("page eight").ready(function () {
+          $("#buttons7").click(function () {
+            $("#eight1").hide();
+            $("#eight2").hide();
+            $("#eight3").hide();
+            $("#buttons8").hide();
+            $("#eight1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#eight2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#eight3").fadeIn(1000)
+                $("#buttons8").delay(1000).fadeIn(500);
+              });
+            });
+          });
+        });
+      </script>
 
       <!-- STORY TRANSITION 8-->
       <div class="page t8"></div>
@@ -521,25 +537,6 @@
           </div>
         </div>
 
-        <!-- Animation 9 -->
-        <script>
-          $("page nine").ready(function () {
-            $("#buttons8").click(function () {
-              $("#nine1").hide();
-              $("#nine2").hide();
-              $("#nine3").hide();
-              $("#nine4").hide();
-              $("#nine1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#nine2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#nine3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                    $("#nine4").fadeIn(1000);
-                  });
-                });
-              });
-            });
-          });
-        </script>
-
         <div class="button-contain" id="buttons9">
           <button onClick="vslide('next', 'ind')">“I’ll read a book, perhaps a couple more chapters of
             [book_name]”</button>
@@ -550,6 +547,28 @@
           <button onClick="vslide('next', 'dist')">You see nothing more than the blissful peace that is your bed, and
             cannot wait to go straight to bed.</button>
         </div>
+      
+      <!-- Animation 9 -->
+      <script>
+        $("page nine").ready(function () {
+          $("#buttons8").click(function () {
+            $("#nine1").hide();
+            $("#nine2").hide();
+            $("#nine3").hide();
+            $("#nine4").hide();
+            $("#buttons9").hide();
+            $("#nine1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#nine2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#nine3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#nine4").fadeIn(1000);
+                  $("#buttons9").delay(1000).fadeIn(500);
+                });
+              });
+            });
+          });
+        });
+      </script>
+
       </div>
 
       <!-- STORY TRANSITION 9-->
@@ -574,6 +593,10 @@
           </div>
         </div>
 
+        <div id="result">
+          <button onClick="results()">Continue to results...</button>
+        </div>
+
         <!-- Animation 10 -->
         <script>
           $("page nine").ready(function () {
@@ -582,10 +605,12 @@
               $("#ten2").hide();
               $("#ten3").hide();
               $("#ten4").hide();
+              $("#result").hide();
               $("#ten1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
                 $("#ten2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                   $("#ten3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                     $("#ten4").fadeIn(1000);
+                    $("#result").delay(1000).fadeIn(500);
                   });
                 });
               });
@@ -593,9 +618,6 @@
           });
         </script>
 
-        <div>
-          <button onClick="results()">Continue to results...</button>
-        </div>
       </div>
 
     </div>

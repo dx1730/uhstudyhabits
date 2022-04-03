@@ -85,6 +85,10 @@ function get_vars() {
     author_name = document.getElementById("book_name").value;
 }
 
+// show next button
+function show_next() {
+    document.getElementById("zero2").innerHTML = "<button onClick=\"vslide('next', 'none'); slidesettings()\">next...</button>";
+}
 
 
 
@@ -165,13 +169,13 @@ function friend(bool) {
 function results() {
     var max = Math.max(pro, ind, dist, calm);
     if (max == pro){
-        window.location.href="/art/framep1.png";
+        window.location.href="art/result/ProcrastinatorResult.png";
     } else if (max == ind) {
-        window.location.href="/art/framep1.png";
+        window.location.href="art/result/IndependentResult.png";
     } else if (max == dist) {
-        window.location.href="/art/framep1.png";
+        window.location.href="art/result/ChaoticResult.png";
     } else {
-        window.location.href="/art/framep1.png";
+        window.location.href="art/result/CalmResult.png";
     }
 }
 
