@@ -11,6 +11,10 @@
     --p4-color: #72828a;
     --p5-color: #29516d;
     --p6-color: #9a9e71;
+    --p7-color: #aa876a;
+    --p8-color: #572e45;
+    --p9-color: #151412;
+    --p10-color: #144662;
   }
   
 button {
@@ -21,10 +25,6 @@ button {
     /* margin: 20px 20px; */
     width: 70%;
     border: 2px solid white;
-<<<<<<< HEAD
-=======
-    background-color: rgba(128, 128, 128, 0.9);
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     color: white;
     cursor: pointer;
     border-radius: 5px;
@@ -61,12 +61,6 @@ button:hover {
 }
 
 .panel1 {
-<<<<<<< HEAD
-=======
-    border-radius: 10px;
-    width: 40%;
-    padding: 2%;
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     width: 40%;
     padding: 1%;
     line-height: 1.3;
@@ -91,100 +85,94 @@ button:hover {
 }
 
 .one{
-<<<<<<< HEAD
     background-color: var(--p1-color);
     background-image: url('../art/page1.png');
-=======
-    background-color: black;
-    background-image: url('art/framep1.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .two{
-<<<<<<< HEAD
     background-color: var(--p2-color);
     background-image: url('../art/page2.png');
-=======
-    background-color: black;
-    background-image: url('art/framep2.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .three{
-<<<<<<< HEAD
     background-color: var(--p3-color);
     background-image: url('../art/page3.png');
-=======
-    background-color: black;
-    background-image: url('art/framep3.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .four{
-<<<<<<< HEAD
     background-color: var(--p4-color);
     background-image: url('../art/page4.png');
-=======
-    background-color: black;
-    background-image: url('art/framep4.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .five{
-<<<<<<< HEAD
     background-color: var(--p5-color);
     background-image: url('../art/page5.png');
-=======
-    background-color: black;
-    background-image: url('art/framep5.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.six{
-<<<<<<< HEAD
-    background-color: var(--p6-color);
-    background-image: url('../art/framep6.png');
-=======
-    background-color: black;
-    background-image: url('art/framep6.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
+.six{
+    background-color: var(--p6-color);
+    background-image: url('../art/page6.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.seven{
+    background-color: var(--p7-color);
+    background-image: url('../art/page7.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.eight{
+    background-color: var(--p8-color);
+    background-image: url('../art/page8.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.nine{
+    background-color: var(--p9-color);
+    background-image: url('../art/page9.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.ten{
+    background-color: var(--p10-color);
+    background-image: url('../art/page10.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 /*Transitions*/
 .t1{
-<<<<<<< HEAD
     
     background-image: linear-gradient(var(--p1-color), var(--p2-color));
-=======
-    background-color: black;
-    background-image: url('art/transition1.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 
 }
 .t2{
-<<<<<<< HEAD
     background-image: linear-gradient(var(--p2-color), var(--p3-color));
-=======
-    background-color: black;
-    background-image: url('art/transition2.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -192,19 +180,11 @@ button:hover {
 
 .t3{
     background-color: black;
-<<<<<<< HEAD
     background-image: linear-gradient(var(--p3-color), var(--p4-color));
-=======
-    background-image: url('art/transition3.png');
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
 .t4{
     background-color: black;
     background-image: linear-gradient(var(--p4-color), var(--p5-color));
@@ -218,8 +198,35 @@ button:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-<<<<<<< HEAD
 }
-=======
+
+.t6{
+    background-color: black;
+    background-image: linear-gradient(var(--p6-color), var(--p7-color));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
->>>>>>> 4b24d380958fa0b60cc5495a8a435e5fd6bbb960
+.t7{
+    background-color: black;
+    background-image: linear-gradient(var(--p7-color), var(--p8-color));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.t8{
+    background-color: black;
+    background-image: linear-gradient(var(--p8-color), var(--p9-color));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.t9{
+    background-color: black;
+    background-image: linear-gradient(var(--p9-color), var(--p10-color));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
