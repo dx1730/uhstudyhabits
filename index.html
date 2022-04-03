@@ -166,19 +166,19 @@
             <script>
               $("page four").ready(function(){
                 $("#buttons3").click(function(){
-                  $("#three1").hide();  
-                  $("#three2").hide();  
-                  $("#three3").hide();  
-                  $("#three1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                    $("#three2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#three3").fadeIn(2000);
+                  $("#four1").hide();  
+                  $("#four2").hide();  
+                  $("#four3").hide();  
+                  $("#four1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#four2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#four3").fadeIn(2000);
                     });
                   });
                 });
               });
             </script>
 
-            <div>
+            <div id = "buttons4">
               <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as well.” </button>
               <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My friend should also be free right now, let me give them a call.”</button>
               <button onCLick="vslide('next', 'calm')">“Maybe I’ll go back home and take a quick break, or even fold my laundry.”</button>
@@ -192,12 +192,38 @@
           <!-- STORY PAGE 5 -->
           <div class="page five">
             <div class="panel1">
-              Lecture crawls along as you count the seconds away. Yet as you walk out of the lecture hall 
-              you realize that time slipped by faster than you expect, reflected by the wispy clouds that 
-              have made their way into the sky, and the vague feeling of hunger in your stomach. Lunch 
-              seems to be in order. <br>
-              <span id="p5"></span>
+
+              <div class = "innerpanel" id="five1"> 
+                Lecture crawls along as you count the seconds away. 
+              </div>
+              
+              <div class = "innerpanel" id="five2"> 
+                Lecture crawls along as you count the seconds away. 
+                Yet as you walk out of the lecture hall you realize that time slipped by faster than you expect, reflected by the wispy clouds that 
+                have made their way into the sky, and the vague feeling of hunger in your stomach. 
+              </div>
+              
+              <div class = "innerpanel" id="five3"> 
+                Lunch seems to be in order.
+              </div>
             </div>
+
+            <!-- Animation 5 -->
+            <script>
+              $("page five").ready(function(){
+                $("#buttons4").click(function(){
+                  $("#five1").hide();  
+                  $("#five2").hide();  
+                  $("#five3").hide();  
+                  $("#five1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#five2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#five3").fadeIn(2000);
+                    });
+                  });
+                });
+              });
+            </script>
+
             <div>
               <button onClick="vslide('next', 'none')">“The dining hall is an easy choice.”<span id="p5a"></span></button>
               <button onClick="vslide('next', 'none')">“Let me go make something at home!”<span id="p5b"></span></button>
@@ -235,6 +261,9 @@
               much schoolwork just standing there in the cold. Or any further thinking, for that 
               matter. <br>
             </div>
+
+            
+
             <div>
               <button onClick="vslide('next', 'dist')">“I’ll head to the A level of the Reg and do some work there.”</span></button>
               <button onClick="vslide('next', 'calm')">“Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</span></button>
