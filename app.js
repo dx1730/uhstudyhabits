@@ -37,6 +37,16 @@ hslide = (direction) => {
 
 // Edit pg 2 on beverage
 function bev(drink) {
+    if (drink == 'coffee') {
+        document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the rich taste of the coffee you had this morning. You can’t wait to have another cup tomorrow.";
+    } else if (drink == 'tea') {
+        document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the warmth of the tea you had this morning. Perhaps you should invest in proper tea leaves.";
+    } else if (drink == 'orange juice') {
+        document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the crisp taste of the orange juice you had this morning. Hopefully there’s still some left in the carton.";
+    } else {
+        document.getElementById("p10").innerHTML = "Interestingly, the last thing you remember is the rich aroma of [friend_name]’s coffee from earlier. Maybe you’ll get yourself a cup tomorrow to give it a try.";
+    }
+
     if (drink == 'coffee' || drink == 'tea'){
         document.getElementById("bev").innerHTML = "The warmth you feel in your soul brings you comfort, and reminds you why you love " + drink + " so much.";
     } else {

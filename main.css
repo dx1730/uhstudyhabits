@@ -104,21 +104,21 @@ button:hover {
 }
 .three{
     background-color: var(--p3-color);
-    background-image: url('../art/page3.png');
+    background-image: url('art/page3.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .four{
     background-color: var(--p4-color);
-    background-image: url('../art/page4.png');
+    background-image: url('art/page4.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .five{
     background-color: var(--p5-color);
-    background-image: url('../art/page5.png');
+    background-image: url('art/page5.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -126,7 +126,7 @@ button:hover {
 
 .six{
     background-color: var(--p6-color);
-    background-image: url('../art/page6.png');
+    background-image: url('art/page6.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -134,7 +134,7 @@ button:hover {
 
 .seven{
     background-color: var(--p7-color);
-    background-image: url('../art/page7.png');
+    background-image: url('art/page7.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -142,7 +142,7 @@ button:hover {
 
 .eight{
     background-color: var(--p8-color);
-    background-image: url('../art/page8.png');
+    background-image: url('art/page8.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -150,7 +150,7 @@ button:hover {
 
 .nine{
     background-color: var(--p9-color);
-    background-image: url('../art/page9.png');
+    background-image: url('art/page9.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -158,7 +158,7 @@ button:hover {
 
 .ten{
     background-color: var(--p10-color);
-    background-image: url('../art/page10.png');
+    background-image: url('art/page10.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
