@@ -47,10 +47,10 @@ window.addEventListener("keydown", onKeyDown, false);
 function onKeyDown(event) {
         switch (event.keyCode) {
             case 32: //spacebar
-                event.preventDefault();
+                return false;
 
                 case 9:
-                    event.preventDefault();
+                    event.preventDefault(); 
             case 192: //tilde                   
                 if (play) {
                     myAudio.pause();
@@ -171,13 +171,13 @@ function friend(bool) {
 function results() {
     var max = Math.max(pro, ind, dist, calm);
     if (max == pro){
-        window.location.href="results/pro.html";
+        window.location.href="art/result/ProcrastinatorResult.png";
     } else if (max == ind) {
-        window.location.href="results/ind.html";
+        window.location.href="art/result/IndependentResult.png";
     } else if (max == dist) {
-        window.location.href="results/dist.html";
+        window.location.href="art/result/ChaoticResult.png";
     } else {
-        window.location.href="results/calm.html";
+        window.location.href="art/result/CalmResult.png";
     }
 }
 
