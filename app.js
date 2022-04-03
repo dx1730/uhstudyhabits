@@ -37,7 +37,11 @@ hslide = (direction) => {
 
 // Edit pg 2 on beverage
 function bev(drink) {
-    document.getElementById("bev").innerHTML = "The warmth you feel in your soul brings you comfort, and reminds you why you love " + drink + " so much.";
+    if (drink == 'coffee' || drink == 'tea'){
+        document.getElementById("bev").innerHTML = "The warmth you feel in your soul brings you comfort, and reminds you why you love " + drink + " so much.";
+    } else {
+        document.getElementById("bev").innerHTML = "The coolness you feel in your soul sharpens your mind, and reminds you why you love " + drink + " so much.";
+    }
 }
 
 // test jump to new page

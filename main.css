@@ -59,6 +59,7 @@ button:hover {
 }
 
 .panel2 {
+    border-radius: 10px;
     width: 40%;
     height: 10%;
     padding: 1%;
