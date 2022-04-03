@@ -148,7 +148,28 @@
               choice and freedom. <br> <br>
               Not that you’ll spend it doing much of anything meaningful, of course. 
             </div>
+<<<<<<< HEAD
             <div>
+=======
+
+            <!-- Animation 4 -->
+            <script>
+              $("page four").ready(function(){
+                $("#buttons3").click(function(){
+                  $("#four1").hide();  
+                  $("#four2").hide();  
+                  $("#four3").hide();  
+                  $("#four1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#four2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#four3").fadeIn(2000);
+                    });
+                  });
+                });
+              });
+            </script>
+
+            <div id = "buttons4">
+>>>>>>> bbd46c871b94ab0c350289959ec5802e76dad635
               <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as well.” </button>
               <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My friend should also be free right now, let me give them a call.”</button>
               <button onCLick="vslide('next', 'calm')">“Maybe I’ll go back home and take a quick break, or even fold my laundry.”</button>
@@ -162,13 +183,36 @@
           <!-- STORY PAGE 5 -->
           <div class="page five">
             <div class="panel1">
-              Lecture crawls along as you count the seconds away. Yet as you walk out of the lecture hall 
-              you realize that time slipped by faster than you expect, reflected by the wispy clouds that 
-              have made their way into the sky, and the vague feeling of hunger in your stomach. Lunch 
-              seems to be in order. <br>
-              <span id="p5"></span>
+              <div class = "innerpanel" id="five1"> 
+                Lecture crawls along as you count the seconds away. 
+              </div>
+              <div class = "innerpanel" id="five2"> 
+                Lecture crawls along as you count the seconds away. 
+                Yet as you walk out of the lecture hall you realize that time slipped by faster than you expect, reflected by the wispy clouds that 
+                have made their way into the sky, and the vague feeling of hunger in your stomach. 
+              </div>
+              <div class = "innerpanel" id="five3"> 
+                Lunch seems to be in order.
+              </div>
             </div>
-            <div>
+
+            <!-- Animation 5 -->
+            <script>
+              $("page five").ready(function(){
+                $("#buttons4").click(function(){
+                  $("#five1").hide();  
+                  $("#five2").hide();  
+                  $("#five3").hide();  
+                  $("#five1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#five2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#five3").fadeIn(2000);
+                    });
+                  });
+                });
+              });
+            </script>
+
+            <div id = "buttons5">
               <button onClick="vslide('next', 'none')">“The dining hall is an easy choice.”<span id="p5a"></span></button>
               <button onClick="vslide('next', 'none')">“Let me go make something at home!”<span id="p5b"></span></button>
               <span id="p5c"></span>
@@ -182,29 +226,63 @@
 
           <!-- STORY PAGE 6 -->
           <div class="page six">
-            <div class="panel1">
-              The sun casts oblique rays of the gentle warmth down upon campus as you 
-              exit your last class of the afternoon. <br>
+            <div class="panel2">
 
-              The soft golden glow, the soothing fabric of your scarf, the long, dark shadows 
-              cast by campus oaks, the coldness of the crisp spring air, the raw feeling of 
-              simply existing, they surround you, enveloping not just you, but also the girl 
-              with the red mittens walking a few paces behind, the two instructors with coffees 
-              in hand approaching from your left, the young man briskly cycling past. <br>
+              <div class = "innerpanel" id="six1"> 
+                The sun casts oblique rays of the gentle warmth down upon campus as you 
+                exit your last class of the afternoon.
+              </div>
 
-              They surround and envelop the tired students running more on caffeine than on sleep, 
+              <div class = "innerpanel" id="six2"> 
+                The soft golden glow, the soothing fabric of your scarf, the long, dark shadows 
+                cast by campus oaks, the coldness of the crisp spring air, the raw feeling of 
+                simply existing, they surround you, enveloping not just you, but also the girl 
+                with the red mittens walking a few paces behind, the two instructors with coffees 
+                in hand approaching from your left, the young man briskly cycling past.
+              </div>
+
+              <div class = "innerpanel" id="six3"> 
+                They surround and envelop the tired students running more on caffeine than on sleep, 
               the cheerful students partying alongside their close friends, the anxious students 
               waiting to hear back regarding their interview, the new students two quarters fresh 
-              into college, the veteran students two months away from graduation. <br>
+              into college, the veteran students two months away from graduation. 
+              </div>
 
-              These sensations which surround everyone and everything remind you, and remind us 
-              all, of the uniqueness of existing here, and of the community that we call home. <br>
-
-              After having a brief moment of existential reflection, you realize that you cannot 
-              just stand in the center of the quad forever. It would be rather difficult to do 
-              much schoolwork just standing there in the cold. Or any further thinking, for that 
-              matter. <br>
+              <div class = "innerpanel" id="six4"> 
+                These sensations which surround everyone and everything remind you, and remind us 
+                all, of the uniqueness of existing here, and of the community that we call home.
+              </div>
+              
+              <div class = "innerpanel" id="six5"> 
+                After having a brief moment of existential reflection, you realize that you cannot 
+                just stand in the center of the quad forever. It would be rather difficult to do 
+                much schoolwork just standing there in the cold. Or any further thinking, for that 
+                matter.
+              </div>
             </div>
+
+            <!-- Animation 6 -->
+            <script>
+              $("page six").ready(function(){
+                $("#buttons5").click(function(){
+                  $("#six1").hide();  
+                  $("#six2").hide();  
+                  $("#six3").hide(); 
+                  $("#six4").hide();  
+                  $("#six5").hide();  
+                  $("#six1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#six2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#six3").fadeIn(2000).fadeOut(2000, function(){
+                        $("#six4").fadeIn(2000).fadeOut(2000, function(){
+                          $("#six5").fadeIn(2000).fadeOut(2000)
+                       });
+                      });
+                    });
+                  });
+                });
+              });
+            </script>
+
             <div>
               <button onClick="vslide('next', 'dist')">“I’ll head to the A level of the Reg and do some work there.”</span></button>
               <button onClick="vslide('next', 'calm')">“Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</span></button>
