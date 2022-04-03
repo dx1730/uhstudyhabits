@@ -51,11 +51,6 @@ button:hover {
 }
 
 .panel1 {
-<<<<<<< HEAD
-    border-radius: 10px;
-    width: 40%;
-    padding: 2%;
-=======
     width: 40%;
     padding: 1%;
     line-height: 1.3;
@@ -67,7 +62,6 @@ button:hover {
     width: 40%;
     height: 10%;
     padding: 1%;
->>>>>>> 4c1511ee6ba466a04f2f64e5f71136bd167c7268
     line-height: 1.3;
     text-align: center;
     background-color: rgba(128, 128, 128, 0.6);
@@ -148,21 +142,3 @@ button:hover {
     background-repeat: no-repeat;
     background-size: contain;
 }
-<<<<<<< HEAD
-
-.t4{
-    background-color: black;
-    background-image: url('../art/transition4.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-.t5{
-    background-color: black;
-    background-image: url('../art/transition5.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-=======
->>>>>>> 4c1511ee6ba466a04f2f64e5f71136bd167c7268
