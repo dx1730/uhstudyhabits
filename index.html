@@ -33,14 +33,14 @@
                   <input type = "text" id = "book_name"><br>
                   Author of said book:<br>
                   <input type = "text" id = "author_name"><br>
-                  <button type = "button" onClick = "get_vars()" id = "rmr">remember...</button>
+                  <button type = "button" onClick = "get_vars(); show_next()" id = "rmr">remember...</button>
                   <span>Press [~] to play/pause</span>
                 </div>
 
                 <script> 
                   $("page zero").ready(function () {
                     $("#rmr").click(function(){
-                      $("#rmr").fadeOut(1000);
+                      $("#rmr").hide();
                     });
                   });
                 </script>
@@ -76,10 +76,10 @@
               $("#one3").hide();
               $("#buttons1").hide();
               $("#zero2").click(function(){
-                $("#one1").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#one2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#one1").delay(1000).fadeIn(1000).delay(3000).fadeOut(1000, function () {
+                  $("#one2").fadeIn(1000).delay(5000).fadeOut(1000, function () {
                     $("#one3").fadeIn(1000);
-                    $("#buttons1").delay(1000).fadeIn(500);
+                    $("#buttons1").delay(3000).fadeIn(500);
                   });
                 });
               });
@@ -127,10 +127,10 @@
               $("#two2").hide();
               $("#two3").hide();
               $("#buttons2").hide();
-              $("#two1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#two2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#two1").delay(1000).fadeIn(1000).delay(3000).fadeOut(1000, function () {
+                $("#two2").fadeIn(1000).delay(1500).fadeOut(1000, function () {
                   $("#two3").fadeIn(1000);
-                  $("#buttons2").delay(1000).fadeIn(500);
+                  $("#buttons2").delay(2000).fadeIn(500);
                 });
               });
             });
@@ -193,10 +193,10 @@
               $("#three2").hide();
               $("#three3").hide();
               $("#buttons3").hide()
-              $("#three1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#three2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#three1").delay(1000).fadeIn(1000).delay(4000).fadeOut(1000, function () {
+                $("#three2").fadeIn(1000).delay(4000).fadeOut(1000, function () {
                   $("#three3").fadeIn(1000);
-                  $("#buttons3").delay(1000).fadeIn(500);
+                  $("#buttons3").delay(2000).fadeIn(500);
                 });
               });
             });
@@ -258,11 +258,10 @@
             $("#buttons4").hide();
             $("#buttons4_next").hide();
             $("#story4_2").hide();
-            
-            $("#four1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-              $("#four2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+            $("#four1").delay(1000).fadeIn(1000).delay(3000).fadeOut(1000, function () {
+              $("#four2").fadeIn(1000).delay(3000).fadeOut(1000, function () {
                 $("#four3").fadeIn(1000);
-                $("#buttons4").delay(1000).fadeIn(500);
+                $("#buttons4").delay(3000).fadeIn(500);
               });
             });
           });
@@ -270,7 +269,7 @@
           $("#buttons4").click(function (){
             $("#buttons4").fadeOut(500, function(){
               $("#story4_2").fadeIn(500);
-              $("#buttons4_next").delay(3000).fadeIn(500);
+              $("#buttons4_next").delay(6000).fadeIn(500);
             });
           });
         });
@@ -312,10 +311,10 @@
               $("#five3").hide();
               $("#five3").hide();
               $("#buttons5").hide();
-              $("#five1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#five2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#five1").delay(1000).fadeIn(1000).delay(1500).fadeOut(1000, function () {
+                $("#five2").fadeIn(1000).delay(4000).fadeOut(1000, function () {
                   $("#five3").fadeIn(1000);
-                  $("#buttons5").delay(1000).fadeIn(500);
+                  $("#buttons5").delay(2000).fadeIn(500);
                 });
               });
             });
@@ -385,12 +384,12 @@
             $("#six4").hide();
             $("#six5").hide();
             $("#buttons6").hide();
-            $("#six1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-              $("#six2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#six3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#six4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+            $("#six1").delay(1000).fadeIn(1000).delay(3000).fadeOut(1000, function () {
+              $("#six2").fadeIn(1000).delay(6000).fadeOut(1000, function () {
+                $("#six3").fadeIn(1000).delay(6000).fadeOut(1000, function () {
+                  $("#six4").fadeIn(1000).delay(6000).fadeOut(1000, function () {
                     $("#six5").fadeIn(1000);
-                    $("#buttons6").delay(1000).fadeIn(500);
+                    $("#buttons6").delay(3000).fadeIn(500);
                   });
                 });
               });
@@ -450,13 +449,13 @@
             $("#seven5").hide();
             $("#seven6").hide();
             $("#buttons7").hide();
-            $("#seven1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-              $("#seven2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#seven3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#seven4").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                    $("#seven5").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+            $("#seven1").delay(1000).fadeIn(1500).delay(1000).fadeOut(1000, function () {
+              $("#seven2").fadeIn(1000).delay(1500).fadeOut(1000, function () {
+                $("#seven3").fadeIn(1000).delay(1500).fadeOut(1000, function () {
+                  $("#seven4").fadeIn(1000).delay(1500).fadeOut(1000, function () {
+                    $("#seven5").fadeIn(1000).delay(1500).fadeOut(1000, function () {
                       $("#seven6").fadeIn(1000);
-                      $("#buttons7").delay(1000).fadeIn(500);
+                      $("#buttons7").delay(5000).fadeIn(500);
                     });
                   });
                 });
@@ -500,10 +499,10 @@
             $("#eight2").hide();
             $("#eight3").hide();
             $("#buttons8").hide();
-            $("#eight1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-              $("#eight2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+            $("#eight1").delay(1000).fadeIn(1000).delay(8000).fadeOut(1000, function () {
+              $("#eight2").fadeIn(1000).delay(3000).fadeOut(1000, function () {
                 $("#eight3").fadeIn(1000)
-                $("#buttons8").delay(1000).fadeIn(500);
+                $("#buttons8").delay(2000).fadeIn(500);
               });
             });
           });
@@ -552,11 +551,11 @@
             $("#nine3").hide();
             $("#nine4").hide();
             $("#buttons9").hide();
-            $("#nine1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-              $("#nine2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#nine3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+            $("#nine1").delay(1000).fadeIn(1500).delay(1000).fadeOut(1000, function () {
+              $("#nine2").fadeIn(1000).delay(3000).fadeOut(1000, function () {
+                $("#nine3").fadeIn(1000).delay(3000).fadeOut(1000, function () {
                   $("#nine4").fadeIn(1000);
-                  $("#buttons9").delay(1000).fadeIn(500);
+                  $("#buttons9").delay(1500).fadeIn(500);
                 });
               });
             });
@@ -601,11 +600,11 @@
               $("#ten3").hide();
               $("#ten4").hide();
               $("#result").hide();
-              $("#ten1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#ten2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#ten3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#ten1").delay(1000).fadeIn(1000).delay(2000).fadeOut(1000, function () {
+                $("#ten2").fadeIn(1000).delay(2000).fadeOut(1000, function () {
+                  $("#ten3").fadeIn(1000).delay(2000).fadeOut(1000, function () {
                     $("#ten4").fadeIn(1000);
-                    $("#result").delay(1000).fadeIn(500);
+                    $("#result").delay(2000).fadeIn(500);
                   });
                 });
               });
