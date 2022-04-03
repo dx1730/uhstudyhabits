@@ -1,436 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UH Study Habits</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UH Study Habits</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
-    <div class="container">
-      <input type="button" value="PLAY" onclick="play()">
-      <audio loop id="audio" src="Maple.mp3"></audio>
-      <input type="button" value="PAUSE" onclick="pause()">
-      <audio id="audio" src="Maple.mp3"></audio>
-        <div class="pages">
-
-          <div>
-            <form>
-              <label for="friend_name">First name:</label><br>
-              <input type="text" id="fname" name="fname"><br>
-              <label for="lname">Last name:</label><br>
-              <input type="text" id="lname" name="lname">
-            </form> 
-          </div>
-          
-          <!-- STORY PAGE 1 -->
-          <div class="page one">        
-            <div class="panel2">
-              <div class = "innerpanel" id="one1""> Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. 
-                Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, 
-                the brick and concrete sheltering you from the frigid air outside.
-              </div>
-              <div class = "innerpanel" id="one2"> The fragmented memories of last night’s dream fade out of your mind as concentration and focus take their place. 
-                A shame, it was a good dream, but even though the details are lost, a vague sense of 
-                happiness remains. “At least it was a happy dream,” you think to yourself as you get ready 
-                for class. You’ll even have time to indulge in breakfast today.
-              </div>
-              <div class = "innerpanel" id="one3"> 
-                While you enjoy all of them, you only have one bottle. What will you have this morning?
-              </div>  
-                
-               <!-- Animation 1 -->
-              <script>
-                $("page one").ready(function(){
-                  $("#one1").hide();  
-                  $("#one2").hide();  
-                  $("#one3").hide();  
-                  $("#one1").fadeIn(2000).fadeOut(2000, function(){
-                    $("#one2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#one3").fadeIn(2000);
-                    });
-                  });  
-                });
-              </script>
-
-            </div>
-            <div class = "button-contain" id = "buttons1">
-              <button onClick="vslide('next', 'none'); bev('coffee')">Coffee: a rich, hearty aroma that offers warmth in the frigid weather.</button>
-              <button onClick="vslide('next', 'none'); bev('tea')">Tea: soothing and refreshing, with a hint of herbal freshness.</button>
-              <button onClick="vslide('next', 'none'); bev('orange juice')">Orange Juice: sweet, refreshing, and full of vitamin C to keep yourself healthy and happy.</button>
-              <button onClick="vslide('next', 'none'); bev('water')">Water: The simple choice to wash away drowsiness.</button>
+  <div class="container">
+    <input type="button" value="PLAY" onclick="play()">
+    <audio loop id="audio" src="Maple.mp3"></audio>
+    <input type="button" value="PAUSE" onclick="pause()">
+    <audio id="audio" src="Maple.mp3"></audio>
+    <div class="pages">
+      <div class="page zero">
+        <div class="panel1">
+          <div class="innerpanel" id=zero1>
+            <div class="input">
+              <form id="p0input">
+                The name of a close friend: <br>
+                <input type="text" id="friend_name"><br>
+                A book you enjoy:<br>
+                <input type="text" id="book"><br>
+                Author of said book:<br>
+                <input type="text" id="author"><br>
+                <input type="submit" value="Submit" />
+              </form>
             </div>
           </div>
-
-          <!-- STORY TRANSITION 1-->
-          
-          <div class="page t1"></div>
-
-          <!-- STORY PAGE 2 -->
-
-          <div class="page two">
-            <div class="panel2">
-              <div class = "innerpanel" id="two1"> As simple as your college life may seem, you are looking forward to tackling the everyday 
-                challenges that may become the highlights, and mishaps, of your day. With your bottle full 
-                and your bag packed, you head out the front door, greeted by the cold, refreshing air.
-              </div>
-              <div class = "innerpanel" id="two2"> 
-                <span id="bev"></span>
-              </div>
-              <div class = "innerpanel" id="two3"> 
-                You find yourself reaching for your headphones. “Maybe I should listen to something.”
-              </div>
-            </div>
-            
-            <!-- Animation 2 -->
-            <script>
-              $("page two").ready(function(){
-                $("#buttons1").click(function(){
-                  $("#two1").hide();  
-                  $("#two2").hide();  
-                  $("#two3").hide();  
-                  $("#two1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                    $("#two2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#two3").fadeIn(2000);
-                    });
-                  });
-                });
-              });
-            </script>
-
-            <div class = "button-contain" id ="buttons2">
-              <button onClick="vslide('next', 'ind')">LoFi music would be perfect right now.</button>
-              <button onClick="vslide('next', 'pro')">Let me catch up on that podcast I’ve been tuning in to. </button>
-              <button onClick="vslide('next', 'dist')">I could use some hip hop to feel more awake. Where’s that RapCaviar playlist…</button>
-              <button onClick="vslide('next', 'calm')">Nevermind. I’ll enjoy my thoughts and the white noise of Hyde Park.</button>
-            </div>
+          <div class="innerpanel" id=zero2>
+            <button onClick="vslide('next', 'none')">New Game</button>
           </div>
-
-          <!-- STORY TRANSITION 2-->
-          
-          <div class="page t2"></div>
-
-           <!-- STORY PAGE 3 -->
-
-          <div class="page three">
-            <div class="panel2">
-              <div class = "innerpanel" id="three1"> The lecture hall is not precisely where you want to be right now, but work must be done and in due time, 
-                your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all of 
-                lecture unfocused, but not so close that you can hear the instructor’s breathing.
-              </div>
-              
-              <div class = "innerpanel" id="three2"> You grasp onto the fragments of conversation dancing around the room, find mild entertainment in catching brief whiffs of campus happenings 
-                and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into one voice.
-              </div>
-
-              <div class = "innerpanel" id="three3"> 
-                Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into your bag.
-              </div>
-
-              <!-- Animation 3 -->
-              <script>
-                $("page three").ready(function(){
-                  $("#buttons2").click(function(){
-                    $("#three1").hide();  
-                    $("#three2").hide();  
-                    $("#three3").hide();  
-                    $("#three1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                      $("#three2").fadeIn(2000).fadeOut(2000, function(){
-                        $("#three3").fadeIn(2000);
-                      });
-                    });
-                  });
-                });
-              </script>
-            </div>
-
-            <div class = "button-contain" id = "buttons3">
-              <button onClick="vslide('next', 'ind')">“My iPad has been one of the most useful things I’ve ever owned.” A few taps are all you need to get ready for class.</button>
-              <button onClick="vslide('next', 'calm')">“Does my laptop have charge? Ah, yes it does.” Your hands are already dancing across the keyboard even before the lecture has started.</button>
-              <button onClick="vslide('next', 'dist')">“I’m running out of paper in this notebook, and my highlighters are almost done too.” Note-taking is an artform, and you are the artist. Gel pens and highlighters on college-rule are the medium.</button>
-              <button onClick="vslide('next', 'pro')">“It’s okay. I’ll pay more attention without anything in front of me to distract, and the lecture notes will be online later today anyways.” Truly the minimalist approach..</button>
-            </div>
-
-          </div>
-
-          <!-- STORY TRANSITION 3-->
-          <div class="page t3"></div>
-
-          <!-- STORY PAGE 4 -->
-          <div class="page four">
-            <div class="panel2">
-              <div class = "innerpanel" id="four1"> 
-                Everyone files out of the room in the usual ordered chaos, your friends in a hurry to catch 
-                their next class.
-              </div>
-              <div class = "innerpanel" id="four2"> 
-                You, however, find yourself surrounded by gothic buildings under a pale 
-                blue sky, with an hour or so until the next class section, and the ever so sweet prospect of 
-                choice and freedom.
-              </div>
-              <div class = "innerpanel" id="four3"> 
-                Not that you’ll spend it doing much of anything meaningful, of course. 
-              </div>
-            </div>
-
-            <!-- Animation 4 -->
-            <script>
-              $("page four").ready(function(){
-                $("#buttons3").click(function(){
-                  $("#four1").hide();  
-                  $("#four2").hide();  
-                  $("#four3").hide();  
-                  $("#four1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                    $("#four2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#four3").fadeIn(2000);
-                    });
-                  });
-                });
-              });
-            </script>
-
-            <div class = "button-contain" id = "buttons4">
-              <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as well.” </button>
-              <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My friend should also be free right now, let me give them a call.”</button>
-              <button onCLick="vslide('next', 'calm')">“Maybe I’ll go back home and take a quick break, or even fold my laundry.”</button>
-              <button onCLick="vslide('next', 'pro')">“I’ll follow a tour guide around for a while and pretend to be a high schooler, I wonder how long it would take for them to notice.”</button>
-            </div>
-          </div>
-
-          <!-- STORY TRANSITION 4-->
-          <div class="page t4"></div>
-
-          <!-- STORY PAGE 5 -->
-          <div class="page five">
-            <div class="panel1">
-              <div class = "innerpanel" id="five1"> 
-                Lecture crawls along as you count the seconds away. 
-              </div>
-              <div class = "innerpanel" id="five2"> 
-                Lecture crawls along as you count the seconds away. 
-                Yet as you walk out of the lecture hall you realize that time slipped by faster than you expect, reflected by the wispy clouds that 
-                have made their way into the sky, and the vague feeling of hunger in your stomach. 
-              </div>
-              <div class = "innerpanel" id="five3"> 
-                Lunch seems to be in order.
-              </div>
-            </div>
-
-            <!-- Animation 5 -->
-            <script>
-              $("page five").ready(function(){
-                $("#buttons4").click(function(){
-                  $("#five1").hide();  
-                  $("#five2").hide();  
-                  $("#five3").hide();  
-                  $("#five1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                    $("#five2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#five3").fadeIn(2000);
-                    });
-                  });
-                });
-              });
-            </script>
-
-            <div class = "button-contain" id = "buttons5">
-              <button onClick="vslide('next', 'none')">“The dining hall is an easy choice.”<span id="p5a"></span></button>
-              <button onClick="vslide('next', 'none')">“Let me go make something at home!”<span id="p5b"></span></button>
-              <span id="p5c"></span>
-              <button onClick="vslide('next', 'none')">“I’ll check out Reynolds Club, it’s been a while since
-                I’ve spent Maroon dollars and can probably spare a few.”<span id="p5d"></span></button>
-            </div>
-          </div>
-
-          <!-- STORY TRANSITION 5-->
-          <div class="page t5"></div>
-
-          <!-- STORY PAGE 6 -->
-          <div class="page six">
-            <div class="panel2">
-
-              <div class = "innerpanel" id="six1"> 
-                The sun casts oblique rays of the gentle warmth down upon campus as you 
-                exit your last class of the afternoon.
-              </div>
-
-              <div class = "innerpanel" id="six2"> 
-                The soft golden glow, the soothing fabric of your scarf, the long, dark shadows 
-                cast by campus oaks, the coldness of the crisp spring air, the raw feeling of 
-                simply existing, they surround you, enveloping not just you, but also the girl 
-                with the red mittens walking a few paces behind, the two instructors with coffees 
-                in hand approaching from your left, the young man briskly cycling past.
-              </div>
-
-              <div class = "innerpanel" id="six3"> 
-                They surround and envelop the tired students running more on caffeine than on sleep, 
-              the cheerful students partying alongside their close friends, the anxious students 
-              waiting to hear back regarding their interview, the new students two quarters fresh 
-              into college, the veteran students two months away from graduation. 
-              </div>
-
-              <div class = "innerpanel" id="six4"> 
-                These sensations which surround everyone and everything remind you, and remind us 
-                all, of the uniqueness of existing here, and of the community that we call home.
-              </div>
-              
-              <div class = "innerpanel" id="six5"> 
-                After having a brief moment of existential reflection, you realize that you cannot 
-                just stand in the center of the quad forever. It would be rather difficult to do 
-                much schoolwork just standing there in the cold. Or any further thinking, for that 
-                matter.
-              </div>
-            </div>
-
-            <!-- Animation 6 -->
-            <script>
-              $("page six").ready(function(){
-                $("#buttons5").click(function(){
-                  $("#six1").hide();  
-                  $("#six2").hide();  
-                  $("#six3").hide(); 
-                  $("#six4").hide();  
-                  $("#six5").hide();  
-                  $("#six1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                    $("#six2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#six3").fadeIn(2000).fadeOut(2000, function(){
-                        $("#six4").fadeIn(2000).fadeOut(2000, function(){
-                          $("#six5").fadeIn(2000);
-                       });
-                      });
-                    });
-                  });
-                });
-              });
-            </script>
-
-            <div id="buttons6">
-              <button onClick="vslide('next', 'pro'); loc('A')">“I’ll head to the A level of the Reg and do some work there.” </button>
-              <button onClick="vslide('next', 'dist'); loc('B')">““Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</button>
-              <button onClick="vslide('next', 'calm'); loc('C')">“Let me head to a cafe, a little white noise really puts me in focus state.”</button>
-              <button onClick="vslide('next', 'ind'); loc('D')">“I’ll head home to the comfort of my room and avoid too many distractions, that’s the best way to be productive.”</button>
-            </div>
-          </div>
-
-          <!-- STORY TRANSITION 6-->
-          <div class="page t6"></div>
-
-           <!-- STORY PAGE 7 -->
-           <div class="page seven">
-            <div class="panel2">
-              <div class = "innerpanel" id="seven1"> 
-                … Time passes …  
-              </div>
-              <div class = "innerpanel" id="seven2"> 
-                … you eat dinner with a few friends …
-              </div>
-              <div class = "innerpanel" id="seven3"> 
-                … you feel happy to spend time with them …
-              </div>
-              <div class = "innerpanel" id="seven4"> 
-                … you promise to get dinner again tomorrow …
-              </div>
-              <div class = "innerpanel" id="seven5"> 
-                … you go back to studying …
-              </div>
-              <div class = "innerpanel" id="seven6"> 
-                In the midst of dwelling over a rather difficult question on your problem set that has been keeping you a little frustrated and 
-                a little too deep in thought, you heard your phone buzz, and [friend_name] is asking where you are, and what you’re doing.
-              </div>
-            </div>
-
-            <!-- Animation 7 -->
-            <script>
-              $("page seven").ready(function(){
-                $("#buttons6").click(function(){
-                  $("#seven1").hide();  
-                  $("#seven2").hide();  
-                  $("#seven3").hide(); 
-                  $("#seven4").hide();  
-                  $("#seven5").hide();  
-                  $("#seven6").hide();  
-                  $("#seven1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                    $("#seven2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#seven3").fadeIn(2000).fadeOut(2000, function(){
-                        $("#seven4").fadeIn(2000).fadeOut(2000, function(){
-                          $("#seven5").fadeIn(2000).fadeOut(2000, function(){
-                            $("#seven6").fadeIn(2000);
-                          });
-                       });
-                      });
-                    });
-                  });
-                });
-              });
-            </script>
-
-            <div id="buttons7">
-              <button onClick="vslide('next', 'pro'); friend(true)">“im at <span id="loc1"></span> and super bored lets do smth”</button>
-              <button onClick="vslide('next', 'dist'); friend(true)">“wanna study w me at <span id="loc2"></span> might be here late tho”</button>
-              <button onClick="vslide('next', 'calm'); friend(false)">“Im at <span id="loc3"></span> but really busy, wanna do tomorrow instead?”</button>
-              <button onClick="vslide('next', 'ind'); friend(false)">… (don’t respond)</button>
-            </div>
-          </div>
-
-          <!-- STORY TRANSITION 6-->
-          <div class="page t6"></div>
-
-          <div class="page eight">
-            <div class="panel2">
-              <div class="innerpanel" id="eight1">
-                <span id="p8"></span> 
-              </div>
-              <div class="innerpanel" id="eight2">
-                You wrap up work for the day, feeling success in your small accomplishments. Through the window you see that the 
-                setting sun has since been replaced by the faint glow of a crescent moon on this beautiful cloudless night. 
-              </div>
-              <div class="innerpanel" id="eight3">
-                A quick glance at the clock tells you that you’ve worked until
-              </div>
-            </div>
-
-            <!-- Animation 8 -->
-            <script>
-              $("page eight").ready(function(){
-                $("#buttons7").click(function(){
-                  $("#eight1").hide();  
-                  $("#eight2").hide();  
-                  $("#eight3").hide(); 
-                  $("#eight1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
-                    $("#eight2").fadeIn(2000).fadeOut(2000, function(){
-                      $("#eight3").fadeIn(2000)
-                    });
-                  });
-                });
-              });
-            </script>
-
-            <div>
-              <button onClick="vslide('next', 'pro')">8pm</button>
-              <button onClick="vslide('next', 'dist')">a tad past ten</button>
-              <button onClick="vslide('next', 'calm')">midnight</button>
-              <button onClick="vslide('next', 'ind')">the early hours of morning</button>
-            </div>
-          </div>
-
-              In the midst of dwelling over a rather difficult question on your problem set that has been 
-              keeping you a little frustrated and a little too deep in thought, you heard your phone buzz, 
-              and [friend_name] is asking where you are, and what you’re doing.
-            </div>
-            <div>
-              <button onClick="vslide('next', 'pro')">“im at <span id="loc1"></span> and super bored lets do smth”</button>
-              <button onClick="vslide('next', 'dist')">“wanna study w me at <span id="loc2"></span> might be here late tho”</button>
-              <button onClick="vslide('next', 'calm')">“Im at <span id="loc3"></span> but really busy, wanna do tomorrow instead?”</button>
-              <button onClick="vslide('next', 'ind')">… (don’t respond)</button>
-            </div>
-          </div>
-
-          <!-- STORY TRANSITION 7-->
-          <div class="page t7"></div>
-
         </div>
       </div>
-<script src="app.js"></script>
+      <div class="page t0"></div>
+
+      <!-- STORY PAGE 1 -->
+      <div class="page one">
+        <div class="panel2">
+          <div class="innerpanel" id="two2">
+            <span id="friend_name"></span>
+          </div>
+          <div class="innerpanel" id="one1""> Sunlight sneaks past the blinds, casting a soft glow upon the small room you call home. 
+Half awake, you feel the warmth of the bed and the soothing familiarity of your surroundings, 
+the brick and concrete sheltering you from the frigid air outside.
+</div>
+<div class = " innerpanel" id="one2"> The fragmented memories of last night’s dream fade out of your mind as
+            concentration and focus take their place.
+            A shame, it was a good dream, but even though the details are lost, a vague sense of
+            happiness remains. “At least it was a happy dream,” you think to yourself as you get ready
+            for class. You’ll even have time to indulge in breakfast today.
+          </div>
+          <div class="innerpanel" id="one3">
+            While you enjoy all of them, you only have one bottle. What will you have this morning?
+          </div>
+          <!-- Animation 1 -->
+          <script>
+            $("page one").ready(function () {
+              $("#one1").hide();
+              $("#one2").hide();
+              $("#one3").hide();
+              $("#one1").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#one2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#one3").fadeIn(2000);
+                });
+              });
+            });
+          </script>
+
+        </div>
+        <div class="button-contain" id="buttons1">
+          <button onClick="vslide('next', 'none'); bev('coffee')">Coffee: a rich, hearty aroma that offers warmth in the
+            frigid weather.</button>
+          <button onClick="vslide('next', 'none'); bev('tea')">Tea: soothing and refreshing, with a hint of herbal
+            freshness.</button>
+          <button onClick="vslide('next', 'none'); bev('orange juice')">Orange Juice: sweet, refreshing, and full of
+            vitamin C to keep yourself healthy and happy.</button>
+          <button onClick="vslide('next', 'none'); bev('water')">Water: The simple choice to wash away
+            drowsiness.</button>
+        </div>
+      </div>
+
+      <!-- STORY TRANSITION 1-->
+      <div class="page t1"></div>
+
+      <!-- STORY PAGE 2 -->
+
+      <div class="page two">
+        <div class="panel2">
+          <div class="innerpanel" id="two1"> As simple as your college life may seem, you are looking forward to
+            tackling the everyday
+            challenges that may become the highlights, and mishaps, of your day. With your bottle full
+            and your bag packed, you head out the front door, greeted by the cold, refreshing air.
+          </div>
+          <div class="innerpanel" id="two2">
+            <span id="bev"></span>
+          </div>
+          <div class="innerpanel" id="two3">
+            You find yourself reaching for your headphones. “Maybe I should listen to something.”
+          </div>
+        </div>
+        <!-- Animation 2 -->
+        <script>
+          $("page two").ready(function () {
+            $("#buttons1").click(function () {
+              $("#two1").hide();
+              $("#two2").hide();
+              $("#two3").hide();
+              $("#two1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#two2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#two3").fadeIn(2000);
+                });
+              });
+            });
+          });
+        </script>
+
+        <div class="button-contain" id="buttons2">
+          <button onClick="vslide('next', 'ind')">LoFi music would be perfect right now.</button>
+          <button onClick="vslide('next', 'pro')">Let me catch up on that podcast I’ve been tuning in to. </button>
+          <button onClick="vslide('next', 'dist')">I could use some hip hop to feel more awake. Where’s that RapCaviar
+            playlist…</button>
+          <button onClick="vslide('next', 'calm')">Nevermind. I’ll enjoy my thoughts and the white noise of Hyde
+            Park.</button>
+        </div>
+      </div>
+
+      <!-- STORY TRANSITION 2-->
+      <div class="page t2"></div>
+
+      <!-- STORY PAGE 3 -->
+
+      <div class="page three">
+        <div class="panel2">
+          <div class="innerpanel" id="three1"> The lecture hall is not precisely where you want to be right now, but
+            work must be done and in due time,
+            your diligence will surely pay off. You claim the seat you often sit in, not too far that you’ll spend all
+            of
+            lecture unfocused, but not so close that you can hear the instructor’s breathing.
+          </div>
+          <div class="innerpanel" id="three2"> You grasp onto the fragments of conversation dancing around the room,
+            find mild entertainment in catching brief whiffs of campus happenings
+            and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into
+            one voice.
+          </div>
+
+          <div class="innerpanel" id="three3">
+            Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into
+            your bag.
+          </div>
+
+          <!-- Animation 3 -->
+          <script>
+            $("page three").ready(function () {
+              $("#buttons2").click(function () {
+                $("#three1").hide();
+                $("#three2").hide();
+                $("#three3").hide();
+                $("#three1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#three2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                    $("#three3").fadeIn(2000);
+                  });
+                });
+              });
+            });
+          </script>
+        </div>
+
+        <div class="button-contain" id="buttons3">
+          <button onClick="vslide('next', 'ind')">“My iPad has been one of the most useful things I’ve ever owned.” A
+            few taps are all you need to get ready for class.</button>
+          <button onClick="vslide('next', 'calm')">“Does my laptop have charge? Ah, yes it does.” Your hands are already
+            dancing across the keyboard even before the lecture has started.</button>
+          <button onClick="vslide('next', 'dist')">“I’m running out of paper in this notebook, and my highlighters are
+            almost done too.” Note-taking is an artform, and you are the artist. Gel pens and highlighters on
+            college-rule are the medium.</button>
+          <button onClick="vslide('next', 'pro')">“It’s okay. I’ll pay more attention without anything in front of me to
+            distract, and the lecture notes will be online later today anyways.” Truly the minimalist
+            approach..</button>
+        </div>
+
+      </div>
+
+      <!-- STORY TRANSITION 3-->
+      <div class="page t3"></div>
+
+      <!-- STORY PAGE 4 -->
+      <div class="page four">
+        <div class="panel2">
+          <div class="innerpanel" id="four1">
+            Everyone files out of the room in the usual ordered chaos, your friends in a hurry to catch
+            their next class.
+          </div>
+          <div class="innerpanel" id="four2">
+            You, however, find yourself surrounded by gothic buildings under a pale
+            blue sky, with an hour or so until the next class section, and the ever so sweet prospect of
+            choice and freedom.
+          </div>
+          <div class="innerpanel" id="four3">
+            Not that you’ll spend it doing much of anything meaningful, of course.
+          </div>
+        </div>
+
+        <!-- Animation 4 -->
+        <script>
+          $("page four").ready(function () {
+            $("#buttons3").click(function () {
+              $("#four1").hide();
+              $("#four2").hide();
+              $("#four3").hide();
+              $("#four1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#four2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#four3").fadeIn(2000);
+                });
+              });
+            });
+          });
+        </script>
+
+        <div class="button-contain" id="buttons4">
+          <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as
+            well.” </button>
+          <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My
+            friend should also be free right now, let me give them a call.”</button>
+          <button onCLick="vslide('next', 'calm')">“Maybe I’ll go back home and take a quick break, or even fold my
+            laundry.”</button>
+          <button onCLick="vslide('next', 'pro')">“I’ll follow a tour guide around for a while and pretend to be a high
+            schooler, I wonder how long it would take for them to notice.”</button>
+        </div>
+      </div>
+
+      <!-- STORY TRANSITION 4-->
+      <div class="page t4"></div>
+
+      <!-- STORY PAGE 5 -->
+      <div class="page five">
+        <div class="panel1">
+          <div class="innerpanel" id="five1">
+            Lecture crawls along as you count the seconds away.
+          </div>
+          <div class="innerpanel" id="five2">
+            Yet as you walk out of the lecture hall you realize that time slipped by faster than you expect, reflected
+            by the wispy clouds that
+            have made their way into the sky, and the vague feeling of hunger in your stomach.
+          </div>
+          <div class="innerpanel" id="five3">
+            Lunch seems to be in order.
+          </div>
+        </div>
+
+        <!-- Animation 5 -->
+        <script>
+          $("page five").ready(function () {
+            $("#buttons4").click(function () {
+              $("#five1").hide();
+              $("#five2").hide();
+              $("#five3").hide();
+              $("#five1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#five2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#five3").fadeIn(2000);
+                });
+              });
+            });
+          });
+        </script>
+
+        <div class="button-contain" id="buttons5">
+          <button onClick="vslide('next', 'none')">“The dining hall is an easy choice.”<span id="p5a"></span></button>
+          <button onClick="vslide('next', 'none')">“Let me go make something at home!”<span id="p5b"></span></button>
+          <span id="p5c"></span>
+          <button onClick="vslide('next', 'none')">“I’ll check out Reynolds Club, it’s been a while since
+            I’ve spent Maroon dollars and can probably spare a few.”<span id="p5d"></span></button>
+        </div>
+      </div>
+
+      <!-- STORY TRANSITION 5-->
+      <div class="page t5"></div>
+
+      <!-- STORY PAGE 6 -->
+      <div class="page six">
+        <div class="panel2">
+
+          <div class="innerpanel" id="six1">
+            The sun casts oblique rays of the gentle warmth down upon campus as you
+            exit your last class of the afternoon.
+          </div>
+
+          <div class="innerpanel" id="six2">
+            The soft golden glow, the soothing fabric of your scarf, the long, dark shadows
+            cast by campus oaks, the coldness of the crisp spring air, the raw feeling of
+            simply existing, they surround you, enveloping not just you, but also the girl
+            with the red mittens walking a few paces behind, the two instructors with coffees
+            in hand approaching from your left, the young man briskly cycling past.
+          </div>
+
+          <div class="innerpanel" id="six3">
+            They surround and envelop the tired students running more on caffeine than on sleep,
+            the cheerful students partying alongside their close friends, the anxious students
+            waiting to hear back regarding their interview, the new students two quarters fresh
+            into college, the veteran students two months away from graduation.
+          </div>
+
+          <div class="innerpanel" id="six4">
+            These sensations which surround everyone and everything remind you, and remind us
+            all, of the uniqueness of existing here, and of the community that we call home.
+          </div>
+          <div class="innerpanel" id="six5">
+            After having a brief moment of existential reflection, you realize that you cannot
+            just stand in the center of the quad forever. It would be rather difficult to do
+            much schoolwork just standing there in the cold. Or any further thinking, for that
+            matter.
+          </div>
+        </div>
+
+        <!-- Animation 6 -->
+        <script>
+          $("page six").ready(function () {
+            $("#buttons5").click(function () {
+              $("#six1").hide();
+              $("#six2").hide();
+              $("#six3").hide();
+              $("#six4").hide();
+              $("#six5").hide();
+              $("#six1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#six2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#six3").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                    $("#six4").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                      $("#six5").fadeIn(2000);
+                    });
+                  });
+                });
+              });
+            });
+          });
+        </script>
+
+        <div class="button-contain" id="buttons6">
+          <button onClick="vslide('next', 'pro'); loc('A')">“I’ll head to the A level of the Reg and do some work
+            there.” </button>
+          <button onClick="vslide('next', 'dist'); loc('B')">““Crerar sounds like a great place to stay for a couple of
+            hours. It’s quite comfortable there.”</button>
+          <button onClick="vslide('next', 'calm'); loc('C')">“Let me head to a cafe, a little white noise really puts me
+            in focus state.”</button>
+          <button onClick="vslide('next', 'ind'); loc('D')">“I’ll head home to the comfort of my room and avoid too many
+            distractions, that’s the best way to be productive.”</button>
+        </div>
+      </div>
+
+      <!-- STORY TRANSITION 6-->
+      <div class="page t6"></div>
+
+      <!-- STORY PAGE 7 -->
+      <div class="page seven">
+        <div class="panel2">
+          <div class="innerpanel" id="seven1">
+            … Time passes …
+          </div>
+          <div class="innerpanel" id="seven2">
+            … you eat dinner with a few friends …
+          </div>
+          <div class="innerpanel" id="seven3">
+            … you feel happy to spend time with them …
+          </div>
+          <div class="innerpanel" id="seven4">
+            … you promise to get dinner again tomorrow …
+          </div>
+          <div class="innerpanel" id="seven5">
+            … you go back to studying …
+          </div>
+          <div class="innerpanel" id="seven6">
+            In the midst of dwelling over a rather difficult question on your problem set that has been keeping you a
+            little frustrated and
+            a little too deep in thought, you heard your phone buzz, and [friend_name] is asking where you are, and what
+            you’re doing.
+          </div>
+        </div>
+
+        <!-- Animation 7 -->
+        <script>
+          $("page seven").ready(function () {
+            $("#buttons6").click(function () {
+              $("#seven1").hide();
+              $("#seven2").hide();
+              $("#seven3").hide();
+              $("#seven4").hide();
+              $("#seven5").hide();
+              $("#seven6").hide();
+              $("#seven1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#seven2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#seven3").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                    $("#seven4").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                      $("#seven5").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                        $("#seven6").fadeIn(2000);
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        </script>
+
+        <div class="button-contain" id="buttons7">
+          <button onClick="vslide('next', 'pro'); friend(true)">“im at <span id="loc1"></span> and super bored lets do
+            smth”</button>
+          <button onClick="vslide('next', 'dist'); friend(true)">“wanna study w me at <span id="loc2"></span> might be
+            here late tho”</button>
+          <button onClick="vslide('next', 'calm'); friend(false)">“Im at <span id="loc3"></span> but really busy, wanna
+            do tomorrow instead?”</button>
+          <button onClick="vslide('next', 'ind'); friend(false)">… (don’t respond)</button>
+        </div>
+      </div>
+
+      <!-- STORY TRANSITION 6-->
+      <div class="page t6"></div>
+
+      <div class="page eight">
+        <div class="panel2">
+          <div class="innerpanel" id="eight1">
+            <span id="p8"></span>
+          </div>
+          <div class="innerpanel" id="eight2">
+            You wrap up work for the day, feeling success in your small accomplishments. Through the window you see that
+            the
+            setting sun has since been replaced by the faint glow of a crescent moon on this beautiful cloudless night.
+          </div>
+          <div class="innerpanel" id="eight3">
+            A quick glance at the clock tells you that you’ve worked until
+          </div>
+        </div>
+
+        <!-- Animation 8 -->
+        <script>
+          $("page eight").ready(function () {
+            $("#buttons7").click(function () {
+              $("#eight1").hide();
+              $("#eight2").hide();
+              $("#eight3").hide();
+              $("#eight1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#eight2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#eight3").fadeIn(2000)
+                });
+              });
+            });
+          });
+        </script>
+
+        <div class="button-contain" id="buttons8">
+          <button onClick="vslide('next', 'pro')">8pm</button>
+          <button onClick="vslide('next', 'dist')">a tad past ten</button>
+          <button onClick="vslide('next', 'calm')">midnight</button>
+          <button onClick="vslide('next', 'ind')">the early hours of morning</button>
+        </div>
+      </div>
+
+      <!-- STORY TRANSITION 8-->
+      <div class="page t8"></div>
+
+      <div class="page nine">
+        <div class="panel2">
+          <div class="innerpanel" id="nine1">
+            Your bed marks the conclusion of another long day.
+          </div>
+          <div class="innerpanel" id="nine2">
+            It is a haven for the weary soul to regain strength and rest today,
+            in preparation for the journey of tomorrow.
+          </div>
+          <div class="innerpanel" id="nine3">
+            It is a portal of sorts, that takes you forward, slowly but surely,
+            into the days and weeks and months that await you.
+          </div>
+          <div class="innerpanel" id="nine4">
+            How do you prepare yourself for such a journey?
+          </div>
+        </div>
+
+        <!-- Animation 9 -->
+        <script>
+          $("page nine").ready(function () {
+            $("#buttons8").click(function () {
+              $("#nine1").hide();
+              $("#nine2").hide();
+              $("#nine3").hide();
+              $("#nine4").hide();
+              $("#nine1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#nine2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#nine3").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                    $("#nine4").fadeIn(2000);
+                  });
+                });
+              });
+            });
+          });
+        </script>
+
+        <div class="button-contain" id="buttons9">
+          <button onClick="vslide('next', 'ind')">“I’ll read a book, perhaps a couple more chapters of
+            [book_name]”</button>
+          <button onClick="vslide('next', 'calm')">“I’ll listen to music until I fall asleep, and give myself a chance
+            to really relax.”</button>
+          <button onClick="vslide('next', 'pro')">“It’s been a while since I last called my parents and caught up with
+            them, and there’s a lot that I want to tell them.”</button>
+          <button onClick="vslide('next', 'dist')">You see nothing more than the blissful peace that is your bed, and
+            cannot wait to go straight to bed.</button>
+        </div>
+      </div>
+
+      <!-- STORY TRANSITION 9-->
+      <div class="page t9"></div>
+
+      <!-- STORY PAGE 10-->
+      <div class="page ten">
+        <div class="panel1">
+          <div class="innerpanel" id="ten1">
+            The line between dream and reality blurs as the clutches of sleep slowly tighten their grasp.
+          </div>
+          <div class="innerpanel" id="ten2">
+            “It’s been a good day,” you think to yourself, or perhaps say in your dream, you are not quite sure.
+          </div>
+          <div class="innerpanel" id="ten3">
+            You see the smiles of your classmates, hear the laughs of your friends, feel the warmth of the sun yet the
+            cold of
+            the air.
+          </div>
+          <div class="innerpanel" id="ten4">
+            <span id="p10"></span>
+          </div>
+        </div>
+
+        <!-- Animation 10 -->
+        <script>
+          $("page nine").ready(function () {
+            $("#buttons9").click(function () {
+              $("#ten1").hide();
+              $("#ten2").hide();
+              $("#ten3").hide();
+              $("#ten4").hide();
+              $("#ten1").delay(2000).fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                $("#ten2").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                  $("#ten3").fadeIn(2000).delay(2000).fadeOut(2000, function () {
+                    $("#ten4").fadeIn(2000);
+                  });
+                });
+              });
+            });
+          });
+        </script>
+
+        <div>
+          <button onClick="results()">Continue to results...</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
 </body>
+
 </html>
