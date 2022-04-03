@@ -47,17 +47,34 @@ hslide = (direction) => {
     );
 }
 
+
+function slidesettings() {
+    document.getElementById("settings").style.top += translateAmount;
+}
+
+function nxt() {
+    var val = (parseInt(document.getElementById('slide').style.left, 10) || 0) + 50;
+    document.getElementById('slide').style.left = val + 'px';
+}
+
 var x;
 var y;
 var z;
 
+var friend_name;
+var book_name;
+var author_name;
+
 
 function get_vars() {
     x = document.getElementById("friend_name").value; 
+    friend_name = document.getElementById("friend_name").value; 
 
     y = document.getElementById("book_name").value; 
+    book_name = document.getElementById("book_name").value;
 
     z = document.getElementById("author_name").value; 
+    author_name = document.getElementById("book_name").value;
 }
 
 
