@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class="container">
-        <div class="vpages">
+        <div class="pages">
+          
           <!-- STORY PAGE 1 -->
           <div class="page one">        
             <div class="panel2">
@@ -27,21 +28,23 @@
                 While you enjoy all of them, you only have one bottle. What will you have this morning?
               </div>              
               <script>
-                $(document).ready(function(){
+                $("page one").ready(function(){
                   $("#one1").hide();  
                   $("#one2").hide();  
                   $("#one3").hide();  
-                  $("#one1").fadeIn(2000).fadeOut(2000);
-                  $("#one2").delay(4000).fadeIn(2000).fadeOut(2000);
-                  $("#one3").delay(8000).fadeIn(2000);
+                  $("#one1").fadeIn(2000).fadeOut(2000, function(){
+                    $("#one2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#one3").fadeIn(2000);
+                    });
+                  });  
                 });
               </script>
             </div>
-            <div>
+            <div id = "buttons1">
               <button onClick="vslide('next', 'none'); bev('coffee')">Coffee: a rich, hearty aroma that offers warmth in the frigid weather.</button>
               <button onClick="vslide('next', 'none'); bev('tea')">Tea: soothing and refreshing, with a hint of herbal freshness.</button>
-              <button onClick="vslide('next', 'none')">Orange Juice: sweet, refreshing, and full of vitamin C to keep yourself healthy and happy.</button>
-              <button onClick="vslide('next', 'none')">Water: The simple choice to wash away drowsiness.</button>
+              <button onClick="vslide('next', 'none'); bev('orange juice')">Orange Juice: sweet, refreshing, and full of vitamin C to keep yourself healthy and happy.</button>
+              <button onClick="vslide('next', 'none'); bev('water')">Water: The simple choice to wash away drowsiness.</button>
             </div>
           </div>
 
@@ -52,20 +55,32 @@
           <!-- STORY PAGE 2 -->
 
           <div class="page two">
-            <div class="panel1">
-              <div id="first"> As simple as your college life may seem, you are looking forward to tackling the everyday 
+            <div class="panel2">
+              <div class = "innerpanel" id="two1"> As simple as your college life may seem, you are looking forward to tackling the everyday 
                 challenges that may become the highlights, and mishaps, of your day. With your bottle full 
                 and your bag packed, you head out the front door, greeted by the cold, refreshing air.
               </div>
-              <br> 
-              <div id="second"> 
+              <div class = "innerpanel" id="two2"> 
                 <span id="bev"></span>
               </div>
-              <br>
-              <div id="third"> 
+              <div class = "innerpanel" id="two3"> 
                 You find yourself reaching for your headphones. “Maybe I should listen to something.”
               </div>
             </div>
+            <script>
+              $("page two").ready(function(){
+                $("#buttons1").click(function(){
+                  $("#two1").hide();  
+                  $("#two2").hide();  
+                  $("#two3").hide();  
+                  $("#two1").delay(2000).fadeIn(2000).fadeOut(2000, function() {
+                    $("#two2").fadeIn(2000).fadeOut(2000, function(){
+                      $("#two3").fadeIn(2000);
+                    });
+                  });
+                });
+              });
+            </script>
             <div>
               <button onClick="vslide('next', 'ind')">LoFi music would be perfect right now.</button>
               <button onClick="vslide('next', 'pro')">Let me catch up on that podcast I’ve been tuning in to. </button>
@@ -89,8 +104,6 @@
               and the intricacies of the lives of others, listen to everyone and everything as all individuals merge into one voice. <br> <br>
 
               Perhaps you are not the best notetaker, but at least it will keep you focused in class, so you reach into your bag.
-<<<<<<< HEAD
-=======
               <script>
                 $(document).ready(function(){
                   $(this).load(function(){
@@ -100,7 +113,6 @@
               </script>
             </div>
             <div>
->>>>>>> 4c1511ee6ba466a04f2f64e5f71136bd167c7268
               <button onClick="vslide('next', 'ind')">“My iPad has been one of the most useful things I’ve ever owned.” A few taps are all you need to get ready for class.</button>
               <button onClick="vslide('next', 'calm')">“Does my laptop have charge? Ah, yes it does.” Your hands are already dancing across the keyboard even before the lecture has started.</button>
               <button onClick="vslide('next', 'dist')">“I’m running out of paper in this notebook, and my highlighters are almost done too.” Note-taking is an artform, and you are the artist. Gel pens and highlighters on college-rule are the medium.</button>
@@ -112,11 +124,75 @@
           <!-- STORY TRANSITION 3-->
           <div class="page t3"></div>
 
-           <!-- STORY PAGE 4 -->
+          <!-- STORY PAGE 4 -->
           <div class="page four">
-            <h1>PAGE 4</h1>
+            <div class="panel1">
+              Everyone files out of the room in the usual ordered chaos, your friends in a hurry to catch 
+              their next class. You, however, find yourself surrounded by gothic buildings under a pale 
+              blue sky, with an hour or so until the next class section, and the ever so sweet prospect of 
+              choice and freedom. <br> <br>
+              Not that you’ll spend it doing much of anything meaningful, of course. 
+            </div>
             <div>
-              <button onClick="vslide('prev'); test()">Previous</button>
+              <button onClick="vslide('next', 'ind')">“I would love a cortado from Ex Libris. Maybe I’ll read for a bit as well.” </button>
+              <button onCLick="vslide('next', 'dist')">“I’m sure my friends are somewhere to be found out and about. My friend should also be free right now, let me give them a call.”</button>
+              <button onCLick="vslide('next', 'calm')">“Maybe I’ll go back home and take a quick break, or even fold my laundry.”</button>
+              <button onCLick="vslide('next', 'pro')">“I’ll follow a tour guide around for a while and pretend to be a high schooler, I wonder how long it would take for them to notice.”</button>
+            </div>
+          </div>
+
+          <!-- STORY TRANSITION 4-->
+          <div class="page t4"></div>
+
+          <div class="page five">
+            <div class="panel1">
+              Lecture crawls along as you count the seconds away. Yet as you walk out of the lecture hall 
+              you realize that time slipped by faster than you expect, reflected by the wispy clouds that 
+              have made their way into the sky, and the vague feeling of hunger in your stomach. Lunch 
+              seems to be in order. <br>
+              <span id="p5"></span>
+            </div>
+            <div>
+              <button onClick="vslide('next', 'none')">“The dining hall is an easy choice.”<span id="p5a"></span></button>
+              <button onClick="vslide('next', 'none')">“Let me go make something at home!”<span id="p5b"></span></button>
+              <span id="p5c"></span>
+              <button onClick="vslide('next', 'none')">“I’ll check out Reynolds Club, it’s been a while since
+                I’ve spent Maroon dollars and can probably spare a few.”<span id="p5d"></span></button>
+            </div>
+          </div>
+
+          <!-- STORY TRANSITION 5-->
+          <div class="page t5"></div>
+
+          <div class="page six">
+            <div class="panel1">
+              The sun casts oblique rays of the gentle warmth down upon campus as you 
+              exit your last class of the afternoon. <br>
+
+              The soft golden glow, the soothing fabric of your scarf, the long, dark shadows 
+              cast by campus oaks, the coldness of the crisp spring air, the raw feeling of 
+              simply existing, they surround you, enveloping not just you, but also the girl 
+              with the red mittens walking a few paces behind, the two instructors with coffees 
+              in hand approaching from your left, the young man briskly cycling past. <br>
+
+              They surround and envelop the tired students running more on caffeine than on sleep, 
+              the cheerful students partying alongside their close friends, the anxious students 
+              waiting to hear back regarding their interview, the new students two quarters fresh 
+              into college, the veteran students two months away from graduation. <br>
+
+              These sensations which surround everyone and everything remind you, and remind us 
+              all, of the uniqueness of existing here, and of the community that we call home. <br>
+
+              After having a brief moment of existential reflection, you realize that you cannot 
+              just stand in the center of the quad forever. It would be rather difficult to do 
+              much schoolwork just standing there in the cold. Or any further thinking, for that 
+              matter. <br>
+            </div>
+            <div>
+              <button onClick="vslide('next', 'dist')">“I’ll head to the A level of the Reg and do some work there.”</span></button>
+              <button onClick="vslide('next', 'calm')">“Crerar sounds like a great place to stay for a couple of hours. It’s quite comfortable there.”</span></button>
+              <button onClick="vslide('next', 'pro')">“Let me head to a cafe, a little white noise really puts me in focus state.”</button>
+              <button onClick="vslide('next', 'ind')">“I’ll head home to the comfort of my room and avoid too many distractions, that’s the best way to be productive.”</button>
             </div>
           </div>
 
