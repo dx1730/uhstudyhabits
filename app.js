@@ -138,13 +138,13 @@ function friend(bool) {
 function results() {
     var max = Math.max(pro, ind, dist, calm);
     if (max == pro){
-        window.location.href="/art/framep1.png";
+        window.location.href="/art/result/ProcrastinatorResult.png";
     } else if (max == ind) {
-        window.location.href="/art/framep1.png";
+        window.location.href="/art/result/IndependentResult.png";
     } else if (max == dist) {
-        window.location.href="/art/framep1.png";
+        window.location.href="/art/result/ChaoticResult.png";
     } else {
-        window.location.href="/art/framep1.png";
+        window.location.href="/art/CalmResult.png";
     }
 }
 
