@@ -4,7 +4,6 @@
     padding: 0;
     font-family: 'Georgia', serif;
 }
-
 button {
     margin: 20px auto;
     position: relative;
@@ -60,56 +59,57 @@ button:hover {
     background-color: rgba(128, 128, 128, 0.9);
 }
 
-.innerpanel {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%); 
-
-}
-
 .one{
     background-color: black;
-    background-image: url('../art/page1.png');
+    background-image: url('../art/page1frame.png');
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .two{
-    background-color: dodgerblue;
+    background-color: black;
+    background-image: url('../art/page2frame.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .three{
-    background-color: indigo;
+    background-color: black;
+    background-image: url('../art/page3frame.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .four{
-    background-color: limegreen;
+    background-color: black;
+    background-image: url('../art/page4frame.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+
 
 /*Transitions*/
 .t1{
-    background-image: linear-gradient(to right, black, dodgerblue)
+    background-color: black;
+    background-image: url('../art/transition1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
 }
 .t2{
-    background: orangered;
+    background-color: black;
+    background-image: url('../art/transition2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .t3{
-    background: orangered;
+    background-color: black;
+    background-image: url('../art/transition3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
-
-@keyframes fadeIn {
-    from {opacity: 0}
-    to {opacity: 1}
-  }
-  
-  .fadeInAnimated {
-    opacity: 0;
-    animation: fadeIn 2s forwards; /* forwards (animation-fill-mode) retains the style from the last keyframe when the animation ends */
-  }
-  
-  #second {
-    animation-delay: 2s;
-  }
-  
-  #third {
-    animation-delay: 4s;
-  }
