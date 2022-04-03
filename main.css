@@ -75,7 +75,8 @@ button:hover {
 
 .one{
     background-color: black;
-    background-image: url('../art/framep1.png');
+    background-image: url('art/framep1.png');
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -103,14 +104,14 @@ button:hover {
 }
 .five{
     background-color: black;
-    background-image: url('../art/page5frame.png');
+    background-image: url('art/framep5.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .six{
     background-color: black;
-    background-image: url('../art/page5frame.png');
+    background-image: url('art/framep6.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
