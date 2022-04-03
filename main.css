@@ -75,7 +75,7 @@ button:hover {
 
 .one{
     background-color: black;
-    background-image: url('../art/page1frame.png');
+    background-image: url('art/page1frame.png');
 
     background-position: center;
     background-repeat: no-repeat;
@@ -83,21 +83,21 @@ button:hover {
 }
 .two{
     background-color: black;
-    background-image: url('../art/page2frame.png');
+    background-image: url('art/page2frame.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .three{
     background-color: black;
-    background-image: url('../art/page3frame.png');
+    background-image: url('art/page3frame.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .four{
     background-color: black;
-    background-image: url('../art/page4frame.png');
+    background-image: url('art/page4frame.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -107,7 +107,7 @@ button:hover {
 /*Transitions*/
 .t1{
     background-color: black;
-    background-image: url('../art/transition1.png');
+    background-image: url('art/transition1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -115,14 +115,14 @@ button:hover {
 }
 .t2{
     background-color: black;
-    background-image: url('../art/transition2.png');
+    background-image: url('art/transition2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .t3{
     background-color: black;
-    background-image: url('../art/transition3.png');
+    background-image: url('art/transition3.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
