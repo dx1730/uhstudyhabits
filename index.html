@@ -484,22 +484,6 @@
           </div>
         </div>
 
-        <!-- Animation 8 -->
-        <script>
-          $("page eight").ready(function () {
-            $("#buttons7").click(function () {
-              $("#eight1").hide();
-              $("#eight2").hide();
-              $("#eight3").hide();
-              $("#eight1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#eight2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#eight3").fadeIn(1000)
-                });
-              });
-            });
-          });
-        </script>
-
         <div class="button-contain" id="buttons8">
           <button onClick="vslide('next', 'pro')">8pm</button>
           <button onClick="vslide('next', 'dist')">a tad past ten</button>
@@ -507,6 +491,24 @@
           <button onClick="vslide('next', 'ind')">the early hours of morning</button>
         </div>
       </div>
+
+      <!-- Animation 8 -->
+      <script>
+        $("page eight").ready(function () {
+          $("#buttons7").click(function () {
+            $("#eight1").hide();
+            $("#eight2").hide();
+            $("#eight3").hide();
+            $("#buttons8").hide();
+            $("#eight1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#eight2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#eight3").fadeIn(1000)
+                $("#buttons8").delay(1000).fadeIn(500);
+              });
+            });
+          });
+        });
+      </script>
 
       <!-- STORY TRANSITION 8-->
       <div class="page t8"></div>
@@ -530,25 +532,6 @@
           </div>
         </div>
 
-        <!-- Animation 9 -->
-        <script>
-          $("page nine").ready(function () {
-            $("#buttons8").click(function () {
-              $("#nine1").hide();
-              $("#nine2").hide();
-              $("#nine3").hide();
-              $("#nine4").hide();
-              $("#nine1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                $("#nine2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                  $("#nine3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
-                    $("#nine4").fadeIn(1000);
-                  });
-                });
-              });
-            });
-          });
-        </script>
-
         <div class="button-contain" id="buttons9">
           <button onClick="vslide('next', 'ind')">“I’ll read a book, perhaps a couple more chapters of
             [book_name]”</button>
@@ -559,6 +542,28 @@
           <button onClick="vslide('next', 'dist')">You see nothing more than the blissful peace that is your bed, and
             cannot wait to go straight to bed.</button>
         </div>
+      
+      <!-- Animation 9 -->
+      <script>
+        $("page nine").ready(function () {
+          $("#buttons8").click(function () {
+            $("#nine1").hide();
+            $("#nine2").hide();
+            $("#nine3").hide();
+            $("#nine4").hide();
+            $("#buttons9").hide();
+            $("#nine1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
+              $("#nine2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                $("#nine3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
+                  $("#nine4").fadeIn(1000);
+                  $("#buttons9").delay(1000).fadeIn(500);
+                });
+              });
+            });
+          });
+        });
+      </script>
+
       </div>
 
       <!-- STORY TRANSITION 9-->
@@ -583,6 +588,10 @@
           </div>
         </div>
 
+        <div id="result">
+          <button onClick="results()">Continue to results...</button>
+        </div>
+
         <!-- Animation 10 -->
         <script>
           $("page nine").ready(function () {
@@ -591,10 +600,12 @@
               $("#ten2").hide();
               $("#ten3").hide();
               $("#ten4").hide();
+              $("#result").hide();
               $("#ten1").delay(1000).fadeIn(1000).delay(1000).fadeOut(1000, function () {
                 $("#ten2").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                   $("#ten3").fadeIn(1000).delay(1000).fadeOut(1000, function () {
                     $("#ten4").fadeIn(1000);
+                    $("#result").delay(1000).fadeIn(500);
                   });
                 });
               });
@@ -602,9 +613,6 @@
           });
         </script>
 
-        <div>
-          <button onClick="results()">Continue to results...</button>
-        </div>
       </div>
 
     </div>
